@@ -1,0 +1,109 @@
+body{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #FF516E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans', 'Helvetica', sans-serif;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+p{
+  color: #444;
+  font-size: 10px!important;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: left!important;
+}
+label{
+  padding-bottom: 10px;
+}
+
+a{
+  color: #4A8DCA;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+.container{
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 40px 50px 40px 50px;
+}
+
+form h1{
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: none;
+}
+
+form ul{
+  display: none;
+}
+
+form span{display: none;}
+
+form input{
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #888;
+  display: block;
+  font-size: 12px;
+  margin-bottom: 30px;
+  padding: 0px 10px;
+  height: 35px;
+  width: 100%;
+}
+
+form input:focus{
+  outline: none;
+  border-color: #ccc;
+}
+
+::-webkit-input-placeholder {
+  color: #bbb;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+form label{
+  display: inline-block;
+}
+
+form button{
+  background-color: #FF516E;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  height: 50px;
+  width: 270px;
+  margin-bottom: 20px;
+  -webkit-transition: all 400ms ease;
+          transition: all 400ms ease;
+}
+
+form button:focus{
+  outline: none;
+}
+
+form button:hover{
+  background-color: #2C3C9E;
+}

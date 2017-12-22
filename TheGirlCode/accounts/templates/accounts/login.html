@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Login </title>
+
+    <!-- Linking the CSS File -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'accounts/login.css' %}" type="text/css">
+
+</head>
+
+<body>
+
+<div class="container">
+    {% if user.is_authenticated %} <!-- checks if the user is logged in or not  -->
+    <h3> Logout before logging in again.</h3>
+    <br>
+    <center>
+        <a href="{% url 'home' %}"> Home </a>
+    </center>
+
+    {% else %}
+
+    <center>
+        <h1> Login Page </h1>
+    </center>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit">Login</button>
+    </form>
+
+    {% endif %}
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Programming &middot; MINET X</title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="The MINET Team">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <!-- icon -->
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://cdnicon.net/i/debe7fa939b1329124ffb5faa54965c3/css/fontello.css">
+        <link rel="stylesheet" href="http://cdnicon.net/i/debe7fa939b1329124ffb5faa54965c3/css/animation.css">
+        <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+        <!-- icon end -->
+
+        {% load static %}
+
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="{% static 'accounts/curriculum/app.css' %}" media="screen" title="no title">
+        <link href="{% static 'accounts/curriculum/skeleton.css' %}" rel="stylesheet">
+        <!-- stylesheet end -->
+
+        <!-- bootstrap -->
+        <link href="{% static 'Bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'Bootstrap/creative.min.css' %}" rel="stylesheet">
+        <!-- bootstrap end -->
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="three columns child">
+
+        <header>
+
+          <a href="#" class="handletter">MINET</a>
+          <img class="logo" src="img/x.png"></img>
+
+        </header>
+
+        <div class="rounds-list">
+
+          <div class="list" id="round-one">
+            <span class="counter">01</span>
+            <p>Combinatorics</p>
+            <i class="ion-ios-close-empty"></i>
+            <ul>
+              <li><a data-navigate="easy">Easy</a></li>
+              <li><a data-navigate="medium">Medium</a></li>
+              <li><a data-navigate="hard">Hard</a></li>
+            </ul>
+          </div>
+
+          <div class="list" id="round-two">
+            <span class="counter">02</span>
+            <p>Game Theory</p>
+            <i class="ion-ios-close-empty"></i>
+            <ul>
+              <li><a data-navigate="easy">Easy</a></li>
+              <li><a data-navigate="medium">Medium</a></li>
+              <li><a data-navigate="hard">Hard</a></li>
+            </ul>
+          </div>
+
+          <div class="list" id="round-three">
+            <span class="counter">03</span>
+            <p>Number Theory</p>
+            <i class="ion-ios-close-empty"></i>
+            <ul>
+              <li><a data-navigate="easy">Easy</a></li>
+              <li><a data-navigate="medium">Medium</a></li>
+              <li><a data-navigate="hard">Hard</a></li>
+            </ul>
+          </div>
+
+          <div class="list" id="round-four">
+            <span class="counter">04</span>
+            <p>Cryptography</p>
+            <i class="ion-ios-close-empty"></i>
+            <ul>
+              <li><a data-navigate="easy">Easy</a></li>
+              <li><a data-navigate="medium">Medium</a></li>
+              <li><a data-navigate="hard">Hard</a></li>
+            </ul>
+          </div>
+
+          <div class="list" id="round-five">
+            <span class="counter">05</span>
+            <p>Graph Theory</p>
+            <i class="ion-ios-close-empty"></i>
+            <ul>
+              <li><a data-navigate="easy">Easy</a></li>
+              <li><a data-navigate="medium">Medium</a></li>
+              <li><a data-navigate="hard">Hard</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="nine columns child">
+
+        <div data-content="landing">
+
+          <h1>Programming &middot; X 2017</h1>
+          <div class="question">
+
+            <p>Welcome to Day 1 of the Programming Event of MINET X 2017. We hope you have as much fun solving the problems as we had making them. You have been provided with Code::Blocks,Sublime Text and Turbo C++ environments.<br><br> The event will be
+              two and a half hours long. There are 5 topics, each with three levels of difficulty - Easy, Medium and Hard. Your answers will have a direct bearing on your team’s stock prices. The score of every team will be relative to the team with the
+              highest score.<br><br> Whenever you wish to attempt a question, raise your hand and one of us will come to you. Note that whenever there is an unsuccessful attempt, the maximum points for a problem are halved. So, for instance, if you answer
+              a question perfectly on your third try, you get one-fourth of the maximum points. Accessing any other site other than the links provided and communication between two or more teams is not permitted.<br><br> If you have any questions about
+              the problems, do not be afraid to ask us. Have fun, and Make beautiful programs. Best of luck!</p>
+          </div>
+        </div>
+
+        <div data-content="round-one">
+
+          <h1>Round One &middot;</h1>
+
+          <div id="easy">
+
+            <h3> Pascal’s Triangle </h3>
+
+            <div class="question">
+
+              <p id="question">
+                Given two integers $i$ and $j$, output all numbers between the $i^{th}$ and $j^{th}$ positions in the $n^{th}$ line of the Pascal’s Triangle. Note that the row number starts from 0.
+
+              </p><br><br>
+              <center><img src="img/pascal.png" style="padding: 1px 50px 40px 50px;width:50%;"></center>
+              <p id="question">
+                <span class="bold">Input: <br> </span> The first line of input contains an integer $n$, the number of the line which is being tested. The next two lines contain the integers $i$ and $j$.
+                <br><br>
+                <span class="bold">Output: <br> </span> The program should output a list of integers between the $i^{th}$ and $j^{th}$ positions in the $n^{th}$ line of the Pascal’s Triangle.
+                <br><br>
+                <span class="bold">Limit: <br> </span>$3 \leq n \leq 30$ , $0 \leq i \leq n-1$ and $1 \leq j \leq n$
+
+                <br><br>
+
+                <span class="bold">Example:</span><br><br>
+              </p>
+
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                  </tr>
+                  <tr>
+                    <td>5<br>0<br>3</td>
+                    <td>1 5 10 10</td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+            </div>
+          </div>
+
+          <div id="medium">
+
+            <h3>Under Cut</h3>
+
+            <div class="question">
+
+              <p id="question">
+                Pintu, the electrician has a big wire of length $N$ metres. He decides to cut this wire into small pieces of at most $K$ meters, for later use. Help Pintu by telling him what’s the minimum number of wires the big wire has to be cut into, and in how many
+                ways can this be done.
+
+                <br><br>
+              </p>
+              <p id="question">
+                <span class="bold">Input: <br> </span>Two space-separated integers $N$, $K$.<br><br>
+                <span class="bold">Output: <br> </span>Two space separated integers, minimum number of wires and number of ways in which it can be cut modulo $10^{6}$.<br><br>
+                <span class="bold">Limits: <br> </span>$1 \leq N,K \leq 10^{4}$<br><br>
+                <span class="bold">Example:</span><br><br>
+                <table style="margin-bottom: 0">
+                  <tbody>
+                    <tr>
+                      <th>Input</th>
+                      <th>Output</th>
+                    </tr>
+                    <tr>
+                      <td>7 3</td>
+                      <td>3 6</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                <p id="question">
+                  <span class="bold">Explanation: </span> <br>The minimum number of wire is 3, and there are 6 ways to make 2 cuts:
+                  <ul>
+                    <li>Positions: 1 4</li>
+                    <li>Positions: 3 4</li>
+                    <li>Positions: 3 6</li>
+                    <li>Positions: 2 4</li>
+                    <li>Positions: 2 5</li>
+                    <li>Positions: 3 5</li>
+                  </ul>
+                </p>
+            </div>
+          </div>
+
+          <div id="hard">
+
+            <h3>Sweet Tooth </h3>
+
+            <div class="question">
+              <p id="question">
+                You have been given an array of coloured candies. All candies have the same features and can only be differentiated on the basis of their colour. Your task is to give us the total number of ways in which you can form a pack of $N$ candies from the given
+                candies.
+
+                <br><br>
+                <span class="bold">Input: <br> </span> First line contains two space seperated integers $X$ and $N$ followed by $X$ integers in the next line denoting $A_1, A_2, ... , A_X$ - colours.
+                <br><br>
+                <span class="bold">Output: <br> </span>Output the required answer modulo $10^{5}$  in one line.
+                <br><br>
+                <span class="bold">Limit: </span> <br> $1 \leq N \leq X \leq 2 \times 10^{5}$ and $1 \leq A_i \leq 2 \times 10^5$
+                <br><br>
+                <span class="bold">Example:</span><br><br>
+              </p>
+
+              <table style="margin-bottom: 0">
+                <tbody>
+                  <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                  </tr>
+                  <tr>
+                    <td>4 2 <br> 3 2 2 3</td>
+                    <td>3</td>
+                  </tr>
+                </tbody>
+
+                <tbody>
+                  <tr>
+                    <td>5 1<br> 2 2 2 2 2</td>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br>
+              <p id="question">
+                <span class="bold">Explanation:<br></b></span> Input 1: Three possible ways are:
+                <ul>
+                  <li>[2, 2]</li>
+                  <li>[3, 3]</li>
+                  <li>[2, 3]</li>
+                </ul>
+
+                Input 2: Only possible way is [2].
+                <br>
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div data-content="round-two">
+
+          <h1>Round Two &middot;</h1>
+
+          <div id="easy">
+
+            <h3>Dark Knights </h3>
+
+            <div class="question">
+              Given a $n$-sided chessboard, determine the maximum number of stable knights i.e, the highest number of knights that can be placed such that no knight is able to kill another within a single move.<br><br>
+
+              <p id="question">
+
+                <span class="bold">Input: <br> </span>A single integer $n$.<br><br>
+                <span class="bold">Output: <br> </span>A single integer that gives the maximum number of stable knights.<br><br>
+                <span class="bold">Limit: <br></span>$0 \leq n \leq 10^{5}$ <br><br>
+                <span class="bold">Example:</span><br><br>
+              </p>
+
+              <table style="margin-bottom: 0">
+                <tbody>
+                  <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>5</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+          </div>
+
+          <div id="medium">
+
+            <h3>The Divisor Game</h3>
+
+            <div class="question">
+
+              <p id="question">
+                Sarkar and Bhavnani are playing a game which has the following rules:
+                <ul style="padding-left:10px;">
+                  <li>Initially, there is a positive integer $n$ written on the desk, which is greater than 1</li>
+                  <li>Sarkar makes the first move, then players make moves alternatively. On each move the current player can either decrease the number on the desk by 1, or divide it by one of its divisors except itself and 1. It's forbidden to decrease the
+                    number if it's equal to 1.</li>
+                  <li>If the current player can't make a move, then he loses. In other words, if there is "1" written on the desk right before his move, then he loses. You need to determine the winner of the game, if $n$ is the number
+                    written on the desk initially. You may assume, that both players play optimally.</li>
+                </ul>
+              </p>
+              <p id="question">
+                <span class="bold">Input: <br> </span> An integer $n$.
+
+                <br><br>
+                <span class="bold">Output: <br> </span>The name of the winner.<br><br>
+                <span class="bold">Limit: </span> <br> $2 \leq n \leq 10^8$<br><br>
+                <span class="bold">Example:</span><br><br>
+              </p>
+
+              <table style="margin-bottom: 0">
+                <tbody>
+                  <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                  </tr>
+                  <tr>
+                    <td>4
+                    </td>
+                    <td> Sarkar </td>
+
+
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+          </div>
+
+          <div id="hard">
+
+            <h3>Right to win</h3>
+
+            <div class="question">
+
+
+
+              <p id="question">
+                Munish and Navjot are playing a game. The game is played on a horizontal strip consisting of $n$ cells that are numbered from left to right with consecutive integers from 1 to $n$. <br><br>At the beginning of the game, a pawn is placed at the cell numbered $x$.
+                The players make moves alternately, i.e. Munish makes all odd numbered moves (1st, 3rd, 5th and so on) and Navjot all even numbered moves (2nd, 4th, 6th and so on). During the $k^{th}$ move the player should move the pawn either exactly
+                $k$ cells to the left or exactly $k$ cells to the right (provided the pawn doesn't land outside the strip). <br><br>For example, in the $k^{th}$ move, if the pawn is located at cell $p$ before the move, it can be moved to either $(p - k)$ or $(p
+                + k)$ if the appropriate cells are part of the strip. <br><br>The player who is not able to make a move (i.e. both the above choices lead to cells outside of the strip) loses the game. Assume that both the players play optimally. We want to find
+                out who will win if the pawn is initially placed at $x$ in a strip containing $n$ cells if Munish plays first.
+
+                <br><br>
+                <span class="bold">Input: <br> </span>Input consists of two space seperated integers $n$ and $x$.
+                <br><br>
+                <span class="bold">Output: <br> </span>The winner i.e. Munish or Navjot.
+                <br><br>
+                <span class="bold">Limits: <br></span>$1 \leq n \leq 10^{6}$<br><br>
+                <span class="bold">Example:</span><br><br>
+              </p>
+
+              <table style="margin-bottom: 0">
+                <tbody>
+                  <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      3 2
+										</td>
+                      <td>Navjot</td>
+                  </tr>
+									<tr>
+                    <td>
+                      4 2
+										</td>
+                      <td>Munish</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div data-content="round-three">
+
+          <h1>Round Pokémon &middot;</h1>
+
+          <div id="easy">
+
+            <h3>Page 3</h3>
+
+            <div class="question">
+
+              <p id="question">
+                Consider a book with $N$ pages. You are told the sum of all the page numbers, but not the value of $N$. It seems fairly simple to determine the value of $N$, but there’s a catch - One of the pages got torn off accidentally, so two consecutive page numbers
+                $M$, $M+1$ are missing. You have to figure out the pages.
+
+                <br><br>
+                <span class="bold">Input: <br> </span>The input consists of a single integer $N$.<br><br>
+                <span class="bold">Output: <br> </span>The output consists of two consecutive integers $M$ and $M+1$.<br><br>
+                <span class="bold">Limit: </span><br>$1 \leq N \leq 10^6$<br><br>
+                <span class="bold">Example:</span><br><br>
+              </p>
+
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                  </tr>
+                  <tr>
+                    <td>310</td>
+                    <td>7 8</td>
+                  </tr>
+                  <tr>
+                    <td>7257</td>
+                    <td>1 2</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+          </div>
+
+          <div id="medium">
+
+            <h3>Mr. Bean’s Day Out</h3>
+            <div class="question">
+              <p>
+                Our good friend, Mr. Bean, is very fond of playing games, and specifically enjoys playing whack-a-mole a lot. So he set out to make his own Whack - a - mole machine. He went to Mrs. Wicket, his landlady, who had $n$ moles in her garden. She wanted to get
+                rid of them.<br><br> The moles have a certain strength which is defined by a natural number $s$.But he came across one problem: if the selected $k$ [>1] moles with strengths $(s_1,s_2,s_3...s_k)$ tend to fight among each other
+                if gcd $(s_1,s_2,s_3...s_k)$ = 1, and hence wouldn’t allow Mr. Bean to play Whack- a - mole.<br><br> Given the fact that, more moles means more fun to play, help him to select the maximum number of moles he can choose from the $n$ moles so that
+                they don’t fight amongst each other and allow our friend, Mr. Bean, to play Whack- a- mole happily. <br><br>
+              </p>
+
+              <span class="bold"><b>Input: <br> </b></span>The input consists of two lines.The first line contains an integer $n$ the number of moles available. The next line contains $n$ space separated integers, where the $i$th number denotes $s_i$ , the strength
+              of the ith mole.
+              <br><br>
+              <span class="bold"><b>Output: <br></b> </span>Print single integer — the maximum number of moles Mr. Bean can take, so that he can play Whack- a- mole.
+              <br><br>
+              <span class="bold"><b>Limits: <br></b> </span>$1 \leq n, s_i \leq 10^5$<br><br>
+              <span class="bold"><b>Example:</b></span><br><br>
+              </p>
+
+              <table style="margin-bottom:0">
+                <tbody>
+                  <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                  </tr>
+                  <tr>
+                    <td>3 <br> 2 3 4</td>
+                    <td>2</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+          </div>
+
+          <div id="hard">
+
+            <h3>Force Awakens</h3>
+
+            <div class="question">
+
+              <p id="question">
+                Kylo Ren wants to defeat The Resistance and thus make The First Order rule the Galaxy. To accomplish this he uses his force to revive Darth Sidious and Darth Vader. Now the task of saving the Galaxy falls on the shoulders of Rey and Luke. <br><br>Using the force
+                they create new lightsabers to defeat all three. These lightsabers use THE FORCE to work, depending upon the user and the opponent $X_{User/Opponent}$ amount of force has to be used to deliver a single strike.To defeat a particular dark
+                side user $N_{User} $ amounts of blows have to be made.<br><br> The only constraint is that a particular light side user can make $A_{User}$ strikes in the battle.Your task is to give the minimum force units that will be used to win the battle and restore
+                peace.
+
+              </p><br>
+              <span class="bold"><b>Input: <br></b> </span>First line contains two space separated integers $A_{Luke}$ and $A_{Rey}$. <br>Second line consists of three space separated integers $N_{Kylo}$ , $N_{Sidious}$ and $N_{Vader}$.<br> Third line contains
+              three integers $X_{Luke/Kylo}$ , $X_{Luke/Sidious}$ and $X_{Luke/Vader}$.<br>Fourth line contains three integers $X_{Rey/Kylo}$ , $X_{Rey/Sidious}$ and $X_{Rey/Vader}$.
+
+              </p><br>
+              <span class="bold"><b>Output: <br></b> </span>A single integer - Minimum force units used.
+              <br><br>
+              <span class="bold"><b>Limits: <br> </b></span>$1 \leq A_{User} , X_{User/Opponent} \leq 600$ and $1 \leq N_{User} \leq 300$ <br><br>
+              <span class="bold"><b>Example:</b></span><br><br>
+              </p>
+
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                  </tr>
+                  <tr>
+                    <td> 8 6<br> 5 5 4<br> 160 100 150<br> 100 120 100<br>
+                    </td>
+                    <td>1550</td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+            </div>
+          </div>
+
+        </div>
+
+        <div data-content="round-four">
+
+          <h1>Round Four &middot;</h1>
+
+          <div id="easy">
+
+            <h3>No Shit Sherlock </h3>
+
+            <div class="question">
+
+              Decrypt the given encrypted string.<br><br>
+
+              <span class="bold"><b>Input: <br></b> </span>The first line of input contains integer $n$. The next line contains $s$ encrypted text<br><br>
+
+              <span class="bold"><b>Output: <br></b> </span>Decrypted string.<br><br>
+              <span class="bold"><b>Limits: <br> </b></span>$1 \leq n \leq s \leq 10^5$<br><br>
+
+              <span class="bold"><b>Example:</b></span><br><br>
+
+              </p>
+
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                  </tr>
+                  <tr>
+                    <td> 5<br> rmanma
+                      <br></td>
+                    <td>ramnam
+                    </td>
+                  </tr>
+                  <tr>
+                    <td> 3<br> daortnws
+                      <br></td>
+                    <td>drwatson
+
+                    </td>
+                    <tr>
+                      <td> 2<br> srpmoadne
+                        <br></td>
+                      <td>spoderman
+
+                      </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="medium">
+
+            <h3>JuMlbDEuP</h3>
+
+            <div class="question">
+
+              <p id="question">
+
+                Decrypt the given encrypted array of integers. Length of the given array is $n$.
+                <br><br>
+
+                <span class="bold"><b>Input: <br> </b></span>The first line of input contains integer $n$. The next line contains $n$ space seperated integers.<br><br>
+                <span class="bold"><b>Output: <br> </b></span>Decrypted text.<br><br>
+                <span class="bold"><b>Limits: <br> </b></span>$0
+                < n \leq 10^5$<br><br>
+                  <span class="bold"><b>Example:</b></span><br><br>
+              </p>
+
+              <table style="margin-bottom: 0">
+                <tbody>
+                  <tr>
+                    <th><b>Input</b></th>
+                    <th><b>Output</b></th>
+                  </tr>
+                  <tr>
+                    <td>5 <br> 80 91 90 41 10
+                    </td>
+                    <td>anish</td>
+                  </tr>
+                  <tr>
+                    <td>6<br> 42 02 50 41 90 31
+                    </td>
+                    <td>minetx</td>
+                  </tr>
+                  <tr>
+                    <td>8<br> 51 81 61 50 81 10 50 32
+
+                    </td>
+                    <td>wearepro</td>
+                  </tr>
+                  <tr>
+                    <td>10<br> 20 51 51 41 50 81 10 12 51 52
+
+                    </td>
+                    <td>youarenoob</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+          </div>
+
+          <div id="hard">
+
+            <h3> 101010</h3>
+
+            <div class="question">
+
+              <p id="question">
+                Decrypt the given encrypted string.<br><br>
+              </p>
+              <span class="bold"><b>Input: <br> </b></span>The first line of input contains integer n followed by r. <br>The next line contains n integers.<br><br>
+              <span class="bold"><b>Output: <br> </b></span>Decrypted text<br><br>
+              <span class="bold"><b>Limits: <br></b></span> $0
+              < n \leq 20$ and $64< r \leq 225$ <br><br>
+                <span class="bold"><b>Example:</b></span><br><br>
+                </p>
+
+                <table>
+                  <tbody>
+                    <tr>
+                      <th><b>Input</b></th>
+                      <th><b>Output</b></th>
+                    </tr>
+                    <tr>
+                      <td>4 69 <br> 42 55 32 42
+                      </td>
+                      <td>oreo</td>
+                    </tr>
+                    <tr>
+                      <td>10 100<br> 37 5 10 0 10 11 16 38 11 22
+                      </td>
+                      <td>AandnotBor</td>
+                    </tr>
+                    <tr>
+                      <td> 8 169 <br> 193 198 221 232 200 199 205 235
+
+                      </td>
+                      <td>notAandB</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+
+        <div data-content="round-five">
+
+          <h1>Round Five &middot;</h1>
+
+          <div id="easy">
+
+            <h3>Social Network</h3>
+
+            <div class="question">
+
+              <p id="question">
+
+                Sidhant examines a social network (because he has no friends. Its main functionality is that two members can become friends (then they can talk with each other and share funny pictures).<br> There are $n$ members, numbered 1 through $n$
+                and $m$ pairs of members are friends. Of course, a member can't be a friend with themselves.<br> Let $A-B$ denote that members $A$ and $B$ are friends. Sidhant thinks that a network is reasonable if and only if the following condition is satisfied:
+                For every three distinct members $(X, Y, Z)$,&nbsp; if $X-Y$ and $Y-Z$ then also $X-Z$. For example: if Aryaman and Nishant are friends, and Aryaman and Rishi are friends, then Rishi and Nishant should be friends as well. Can you help Sidhant and check
+                if the network is reasonable?
+                <br><br>
+                <span class="bold">Input: <br> </span> The first line of the input contain two integers $n$ and $m$ — the number of members and the number of pairs of members that are friends. The $i^{th}$ of the next $m$ lines contains two distinct integers
+                $a_i$ and $b_i$ Members $a_i$ and $b_i$ are friends with each other. No pair of members will appear more than once in the input.
+
+
+                <br><br>
+                <span class="bold">Output: <br> </span>If the given network is reasonable, print "YES" in a single line (without the quotes). Otherwise, print "NO" in a single line (without the quotes). .
+                <br><br>
+                <span class="bold">Limits: <br> </span>$0
+                \leq n \leq 150000$<br>
+								$0 \leq m \leq min(150000,\frac{n.(n-1)}{2})$<br>
+								$1 \leq a_i, b_i \leq n$ <br><br>
+              </p>
+              <p id="question">
+                <span class="bold">Example:</span><br><br>
+              </p>
+
+              <table style="margin-bottom: 0">
+                <tbody>
+                  <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                  </tr>
+                  <tr>
+                    <td>
+
+                      4 3<br> 1 3<br> 3 4<br> 1 4
+                    </td>
+                    <td>
+                      YES
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+
+                      4 4<br> 3 1<br> 2 3<br> 3 4<br> 1 2
+                    </td>
+                    <td>
+                      NO
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+
+                      3 2<br> 1 2<br> 2 3
+                    </td>
+                    <td>
+                      NO
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+          </div>
+
+          <div id="medium">
+
+            <h3>Quest for Laddus</h3>
+
+            <div class="question">
+
+              <p id="question">
+                Little boy Bheem wants to eat all kinds of laddus, and thus decides to travel. At first, he decided to visit all the cities of his motherland — Dholakpur.<br><br> It is widely known that Dholakpur has $n$ cities connected with $m$ bidirectional roads. Also, there
+                are no two roads in the country that connect the same pair of cities, but roads starting and ending in the same city can exist. Bheem wants to plan his journey beforehand. He thinks a path is good if the path goes over $(m - 2)$ roads
+                twice, and over the other 2 exactly once. The good path can start and finish in any city of Dholakpur. Now he wants to know how many different good paths are in Dholakpur.<br><br> Two paths are considered different if the sets of roads the paths
+                goes over exactly once differ. Help Bheem — calculate the number of good paths.<br><br>
+
+                <span class="bold">Input: <br> </span>The first line contains two integers $n$, $m$ — the number of cities and roads in Dholakpur.<br> Each of the next $m$ lines contains two integers $u$ and $v$. There is road between cities
+                $u$ and $v$. It is guaranteed that no road will be given in the input twice. That also means that for every city there is no more than one road that connects the city to itself.
+                <br><br>
+                <span class="bold">Output: <br> </span>Print out the only integer — the number of good paths in Dholakpur.
+                <br><br>
+                <span class="bold">Limits: <br> </span>$0
+                < n,m < 10^6$ and $0< u,v< n$<br><br>
+                  <span class="bold">Example:</span><br><br>
+              </p>
+
+              <table style="margin-bottom: 0">
+                <tbody>
+                  <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                  </tr>
+                  <tr>
+                    <td>5 4 1 2<br> 1 3<br> 1 4<br> 1 5
+                    </td>
+                    <td>
+                      6
+                    </td>
+
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+          </div>
+
+          <div id="hard">
+
+            <h3>Dijkstra wants to go home</h3>
+
+            <div class="question">
+              <p id="question">
+                The Königsberg bridge problem asks if the seven bridges of the city of Königsberg, formerly in Germany but now known as Kaliningrad and part of Russia, over the river Preger can all be traversed in a single trip without doubling back. Your job is to tell
+                whether you can cover the said closed figure of $n$ in a single trip without doubling back.
+
+                <center><img src="path.png" style="margin:2.5rem;width:50%;"></center>
+
+                <span class="bold"><b>Input: <br> </b></span> First line of input is $n$ vertices, followed by an integer $k$. The next $k$ lines of inputs contain 2 space separated integers denoting the vertices that are connected. Note: There can be
+                more than 1 edge joining 2 vertices.
+
+
+                <br><br>
+                <span class="bold"><b>Output: <br> </b></span>"Yes" if it is possible to cover all edges else "No" if not possible.<br><br>
+                <span class="bold"><b>Limits: <br></b> </span>$0
+                < n \leq 100$ and $0 < k < 10^4$ <br><br>
+                  <span class="bold"><b>Example:</b></span><br><br>
+              </p>
+
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      4 7<br> 4 1<br> 1 4<br> 1 2<br> 4 2<br> 3 4<br> 4 3<br> 2 3
+
+                      <td>
+                        No
+                      </td>
+                  </tr>
+                  </tr>
+                  <tr>
+                    <td>
+                      4 5<br> 1 3<br> 2 3<br> 1 4<br> 2 4<br> 3 4
+
+
+                      <td>
+                        Yes
+                      </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <iframe src="https://trinket.io/embed/python/39f84468a9" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+  <!-- <div class="question">
+
+			<p id="question"><strong>1</strong> Trademarked Transaction</p>
+      		<form class="cryptx">
+				<input type="text" placeholder="Answer" name="answer" class="answer-box" autofocus autocomplete="off">
+				<input type="submit">
+			</form>
+
+		</div> -->
+
+  <script src="//use.typekit.net/dbe5tbi.js"></script>
+  <script>
+    try {
+      Typekit.load();
+    } catch (e) {}
+  </script>
+  <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });
+  </script>
+
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+
+  <script type="text/javascript">
+    $(".list").click(function() {
+      $(this).find("ul").slideDown();
+      $(this).find("i").css("display", "inline");
+    });
+
+    $(".list i").click(function(event) {
+      event.stopPropagation();
+      $(this).parent().find("ul").slideUp();
+      $(this).css("display", "none");
+    });
+
+    $(".list ul li").click(function() {
+      var difficulty = $(this).find("a").data("navigate");
+      var roundCount = $(this).parent().parent().attr('id');
+      $("div[data-content]").css("display", "none");
+      $('div[data-content=' + roundCount + ']').css("display", "block");
+      var id = '#' + difficulty;
+      $('div[data-content=' + roundCount + ']').find('div[id]').css("display", "none");
+      $('div[data-content=' + roundCount + ']').find(id).css("display", "block");
+      if (roundCount == "round-one") {
+        temp = "Round One &middot;";
+      } else if (roundCount == "round-two") {
+        temp = "Round Two &middot;";
+      } else if (roundCount == "round-three") {
+        temp = "Round Three &middot;";
+      } else if (roundCount == "round-four") {
+        temp = "Round Four &middot;";
+      } else if (roundCount == "round-five") {
+        temp = "Round Five &middot;";
+      }
+      var capitalized = difficulty[0].toUpperCase() + difficulty.substring(1);
+      var newText = temp + ' ' + capitalized;
+      $('div[data-content=' + roundCount + ']').find("h1").html(newText);
+    });
+  </script>
+
+</body>
+
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Course-1</title>
+    </head>
+    <body>
+    <h1> Course </h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"> Submit </button>
+    </form>
+    {{ user }}
+    {{ user.progress }}
+    {{ user.answer_1 }}
+
+    {% if  user.answer_1 == 90201 %}
+    <h2> correct </h2>
+    {% else %}
+    <h2> try again </h2>
+    {% endif %}
+    </body>
+</html> -->

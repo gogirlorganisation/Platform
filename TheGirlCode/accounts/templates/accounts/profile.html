@@ -1,0 +1,210 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Album example for Bootstrap</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {% load static %}
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'Bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'accounts/profile.css' %}" rel="stylesheet">
+      <link href="{% static 'TheGirlCode/LandingPage/master.css' %}" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <!-- header -->
+        <header class="navbar-fixed-top light">
+      <nav>
+        <ul class="leftalign">
+          <li><a style="color: rgba(255, 51, 85, .85)" href="{% url 'accounts:profile' %}">
+              {{user.username}}
+             </a></li>
+        </ul>
+        <ul>
+         <li><a href=" {% url 'accounts:logout' %}"> Logout</a></li>
+         <li><a href=" {% url 'accounts:settings' %}"> Settings</a></li>
+            <li><a href="{% url 'accounts:course' %}"> Course </a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- header end -->
+
+    <main role="main">
+
+      <section class="alexa">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text">
+            <h1 class="jumbotron-heading"> Hi, <b>{{user.username}}</b> </h1>
+          <p class="lead text-muted">Email: <b>{{ user.email }}</b></p>
+            <p class="lead text-muted"> Progress: <b>{{ user.userprofile.progress }}</b></p>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+      <span class="sr-only">70% Complete</span>
+    </div>
+  </div>
+          </div>
+          
+      </div>
+      <div class="section" id="projects">
+        <div class="container">
+            <!-- main container -->
+            <div class="main-container portfolio-inner clearfix">
+                <!-- portfolio div -->
+                <div class="portfolio-div">
+                    <div class="portfolio">                        
+                        <!-- portfolio_container -->
+                        <div class="no-padding portfolio_container clearfix">
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6">
+                                <a id="demo01" href="#" class="portfolio_item"> <img src="{% static 'accounts/profile img/placeholder.svg' %}" alt="Card image cap">
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>GGWP</span> <em>anish is bae</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+                            
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6 ads movie">
+                                <a id="demo02" href="#" class="portfolio_item"> <img src="{% static 'accounts/profile img/placeholder.svg' %}" alt="Card image cap">
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>GGWP</span> <em>anish is bae</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+                            
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6 product">
+                                <a id="demo03" href="#" class="portfolio_item"> <img src="{% static 'accounts/profile img/placeholder.svg' %}" alt="Card image cap">
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border research">
+                                            <div class="item_info"> <span>GGWP</span> <em>anish is bae</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+                            
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6">
+                                <a id="demo01" href="#" class="portfolio_item"> <img src="{% static 'accounts/profile img/placeholder.svg' %}" alt="Card image cap">
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>GGWP</span> <em>anish is bae</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+                            
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6 ads movie">
+                                <a id="demo02" href="#" class="portfolio_item"> <img src="{% static 'accounts/profile img/placeholder.svg' %}" alt="Card image cap">
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>GGWP</span> <em>anish is bae</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+                            
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6 product">
+                                <a id="demo03" href="#" class="portfolio_item"> <img src="{% static 'accounts/profile img/placeholder.svg' %}" alt="Card image cap">
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border research">
+                                            <div class="item_info"> <span>GGWP</span> <em>anish is bae</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6">
+                                <a id="demo01" href="#" class="portfolio_item"> <img src="{% static 'accounts/profile img/placeholder.svg' %}" alt="Card image cap">
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>GGWP</span> <em>anish is bae</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+                            
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6 ads movie">
+                                <a id="demo02" href="#" class="portfolio_item"> <img src="{% static 'accounts/profile img/placeholder.svg' %}" alt="Card image cap">
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>GGWP</span> <em>anish is bae</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+                            
+                            <!-- single work -->
+                            <div class="col-md-4 col-sm-6 product">
+                                <a id="demo03" href="#" class="portfolio_item"> <img src="{% static 'accounts/profile img/placeholder.svg' %}" alt="Card image cap">
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border research">
+                                            <div class="item_info"> <span>GGWP</span> <em>anish is bae</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end single work -->
+
+                            
+                        </div>
+                        <!-- end portfolio_container -->
+                    </div>
+                    <!-- portfolio -->
+                </div>
+                <!-- end portfolio div -->
+            </div>
+            <!-- end main container -->
+        </div>
+    </div>
+    <!-- ./projects -->
+      
+    </main>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="Bootstrap/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="Bootstrap/assets/js/vendor/popper.min.js"></script>
+    <script src="Bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="Bootstrap/assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+  </body>
+</html>

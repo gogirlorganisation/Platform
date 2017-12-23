@@ -40,8 +40,8 @@
             <img src="{% static 'TheGirlCode/LandingPage/Images/logo.png' %}" class="girllogo"/> </a></li>
         </ul>
         <ul>
-          <li><a href="#" id="aboutus">About us</a></li>
-          <li><a href="course.html">Workshop</a></li>
+          <li><a href="{% url 'about_us' %}">About us</a></li>
+          <li><a href="{% url 'workshops' %}"">Workshops</a></li>
           <li><a href="#">Platform</a></li>
           <li><a href="{% url 'accounts:login' %}"> Log in </a></li>
           <li><a href="{% url 'accounts:register' %}"> Sign up</a></li>

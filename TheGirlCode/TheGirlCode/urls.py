@@ -9,8 +9,11 @@ urlpatterns = [
     #Home Page
     url(r'^$', views.home , name ='home'),
 
-    #Home Page
+    #About Us
     url(r'^aboutus/$', views.about_us , name ='about_us'),
+
+    #Workshops
+    url(r'^workshops/$', views.workshops , name ='workshops'),
 
     # Accounts
     url(r'^account/', include('accounts.urls')),

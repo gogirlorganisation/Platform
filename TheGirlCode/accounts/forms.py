@@ -40,7 +40,7 @@ class EditProfileForm(UserChangeForm):
 
 
 class CourseForm1(forms.ModelForm):
-    answer_1 = forms.IntegerField()
+    answer_1 = forms.CharField()
 
     class Meta:
         model = UserProfile

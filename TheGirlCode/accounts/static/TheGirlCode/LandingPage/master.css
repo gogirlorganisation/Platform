@@ -275,7 +275,6 @@ a {
 a:active,
 a:hover {
   outline: 0;
-  border: none;
 }
 abbr[title] {
   border-bottom: 1px dotted;

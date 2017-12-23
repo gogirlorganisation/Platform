@@ -11,7 +11,7 @@ from django.db.models.signals import post_save
 class UserProfile(models.Model):
     user = models.OneToOneField(User)   # Linking with the default django user model
     progress = models.IntegerField(default=0)  # Progress of the user
-    answer_1 = models.IntegerField(default=0)
+    answer_1 = models.CharField(max_length=50)
 
     def __str__(self):  # Displays names on the admin site
         return self.user.username

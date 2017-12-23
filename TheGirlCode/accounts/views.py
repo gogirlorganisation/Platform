@@ -88,7 +88,13 @@ def course_1(request):
         if form.is_valid():
             form.save()
 
-        args = {'user': profile, 'form': form}
+            ans = form.cleaned_data['answer_1']
+
+            if ans == "Hello World" and profile.answer_1 != "Hello World":
+                profile.progress += 1
+                profile.save()
+
+        args = {'user': profile, 'form': form, 'ans':ans}
 
         return render(request, 'accounts/course_1.html', args)
 

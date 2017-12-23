@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--Linking the css files from static-->
 
         <!-- icon -->
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
         <link rel="stylesheet" href="http://cdnicon.net/i/debe7fa939b1329124ffb5faa54965c3/css/fontello.css">
         <link rel="stylesheet" href="http://cdnicon.net/i/debe7fa939b1329124ffb5faa54965c3/css/animation.css">
-        <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
         <!-- icon end -->
 
+        <!--Linking the css files from static-->
         {% load static %}
-
-        <!-- stylesheet -->
-        <link rel="stylesheet" href="{% static 'TheGirlCode/LandingPage/master.css' %}" media="screen" title="no title">
-        <link href="{% static 'TheGirlCode/LandingPage/style.css' %}" rel="stylesheet">
-        <!-- stylesheet end -->
 
         <!-- bootstrap -->
         <link href="{% static 'Bootstrap/bootstrap.min.css' %}" rel="stylesheet">
         <link href="{% static 'Bootstrap/creative.min.css' %}" rel="stylesheet">
         <!-- bootstrap end -->
 
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="{% static 'TheGirlCode/LandingPage/master.css' %}" media="screen" title="no title">
+        <link href="{% static 'TheGirlCode/LandingPage/style.css' %}" rel="stylesheet">
+        <!-- stylesheet end -->
+
         <!--[if IE 7]>
         <link rel="stylesheet" href="http://cdnicon.net/i/debe7fa939b1329124ffb5faa54965c3/css/fontello-ie7.css">
         <![endif]-->
+
         <title>The Girl Code</title>
         <link rel="icon" href="{% static 'TheGirlCode/LandingPage/Images/logo_trans.png' %}">
+
     </head>
+
     <body>
 
-    <!-- header -->
+    <!-- navigation bar -->
       <header class="navbar-fixed-top light">
         <nav>
           <ul class="leftalign">
@@ -41,31 +42,31 @@
               <img src="{% static 'TheGirlCode/LandingPage/Images/logo.png' %}" class="girllogo"/></a></li>
           </ul>
           <ul>
-            <li><a href="{% url 'about_us' %}" id="aboutus">About us</a></li>
-            <li><a href="#"> Workshops</a></li>
+            <li><a href="{% url 'about_us' %}">About us</a></li>
+            <li><a href="{% url 'workshops' %}"> Workshops</a></li>
             <li><a href="#"> Platform</a></li>
             <li><a href="{% url 'accounts:login' %}"> Log in </a></li>
             <li><a href="{% url 'accounts:register' %}"> Sign up</a></li>
           </ul>
         </nav>
       </header>
-    <!-- header end -->
+    <!-- navigation bar end -->
 
-      <!-- home -->
+      <!-- Header -->
       <header class="masthead">
         <div class="jumbotron jumbotron-fluid" id="cover">
-        <div class="container">
-          <center>
-            <h1 class="display-2 line">Code with Confidence.</h1>
-            <h2 class="line" style="margin-bottom: 0.33em;">Empowering girls through programming.</h2>
-            <a class="cta" style="background-color:inherit; color:  rgba(255, 51, 85, .85)" href="course.html">Learn More</a>
-            <a class="cta " href="https://docs.google.com/forms/d/e/1FAIpQLSc_nf316jn5S3kPvZOYUZmjM3TQq-X49u9CnsfB99tHLhdWmw/viewform">Register</a>
-          </center>
-        </div>
+            <div class="container">
+              <center>
+                <h1 class="display-2 line">Code with Confidence.</h1>
+                <h2 class="line" style="margin-bottom: 0.33em;">Empowering girls through programming.</h2>
+                <a class="cta" style="background-color:inherit; color:  rgba(255, 51, 85, .85)" href="{% url 'about_us' %} ">Learn More</a>
+                <a class="cta " href="#">Join us</a>
+              </center>
+            </div>
         <img class="bounce" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iMTI4cHgiIGhlaWdodD0iMTI4cHgiPgogIDxnPgogICAgPHBhdGggZD0ibTEyMS4zLDM0LjZjLTEuNi0xLjYtNC4yLTEuNi01LjgsMGwtNTEsNTEuMS01MS4xLTUxLjFjLTEuNi0xLjYtNC4yLTEuNi01LjgsMC0xLjYsMS42LTEuNiw0LjIgMCw1LjhsNTMuOSw1My45YzAuOCwwLjggMS44LDEuMiAyLjksMS4yIDEsMCAyLjEtMC40IDIuOS0xLjJsNTMuOS01My45YzEuNy0xLjYgMS43LTQuMiAwLjEtNS44eiIgZmlsbD0iI2VkNWE4OSIvPgogIDwvZz4KPC9zdmc+Cg==" />
       </div>
       </header>
-      <!-- home end-->
+      <!-- Header end-->
 
       <!-- Mission Statement -->
       <section class="About dark">
@@ -114,7 +115,9 @@
               </p>
             </div>
             <div class="col-md-12">
-              <center><a class="big" href="https://docs.google.com/forms/d/e/1FAIpQLSeJyonszAh1S5bBF-fSVh9ZY7I4vYyfpPPc_nHAXtwBBlGWHA/viewform">Join us</a></center>
+              <center>
+                  <a class="big" href="https://docs.google.com/forms/d/e/1FAIpQLSeJyonszAh1S5bBF-fSVh9ZY7I4vYyfpPPc_nHAXtwBBlGWHA/viewform">Join us</a>
+              </center>
             </div>
           </div>
         </div>
@@ -122,77 +125,72 @@
       <!-- Join us end -->
 
       <!-- Blog -->
-      <section class="blog">
-        <div class="container maison">
-          <div class="row">
+    <section class="blog">
+      <div class="container maison">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Read our blog!</h2>
+            <p>
+              <h1><a href="https://medium.com/@girlscodetoo">
+                <i class="icon-medium"></i></a></h1>
+              Stay up-to-date with everything at The Girl Code.
+            </p>
+          </div>
+
+          <a href="https://medium.com/@girlscodetoo/what-why-and-how-the-girl-code-85096ac37946">
             <div class="col-md-6">
-              <h2>Read our blog!</h2>
+              <h3>What, why and how: The Girl Code</h3>
               <p>
-                <h1><a href="https://medium.com/@girlscodetoo">
-                  <i class="icon-medium"></i></a></h1>
-                Stay up-to-date with everything at The Girl Code.
+                Only 11% programmers in the world are female. The obvious question that comes to mind is- Why? Why is there such a huge gender gap in this field? Why aren’t more women programming?
+                The problem is a lack of confidence...<i color="pink">read more.</i>
               </p>
             </div>
-
-            <a href="https://medium.com/@girlscodetoo/what-why-and-how-the-girl-code-85096ac37946">
-              <div class="col-md-6">
-                <h3>What, why and how: The Girl Code</h3>
-                <p>
-                  Only 11% programmers in the world are female. The obvious question that comes to mind is- Why? Why is there such a huge gender gap in this field? Why aren’t more women programming?
-                  The problem is a lack of confidence...<i color="pink">read more.</i>
-                </p>
-              </div>
-            </a>
-          </div>
-
-           <a href="https://medium.com/@girlscodetoo/the-problem-eabb2386c3e9">
-            <div class="col-md-3">
-              <h3>The Problem</h3>
-                <p>
-                  To Code or not to Code-that is the question most girls face today.
-                  Why go into a field dominated by men? Why be completely alone and isolated there? If there aren’t any women there...<i color="pink">read more.</i>
-                </p>
-            </div>
           </a>
+        </div>
 
-          <a href="https://medium.com/@girlscodetoo/plan-of-action-dc789aa23aee">
-            <div class="col-md-3">
-
-              <h3>The Solution</h3>
-                <p>
-                  We will introduce girls between the ages of 10 to 13 to programming via learning Python. We have specially designed our website and course to appeal to young girls...<i color="pink">read more.</i>
-                </p>
-
-            </div>
-         </a>
-
-          <a href="https://medium.com/@girlscodetoo/workshops-3e7dea8bd20a">
-            <div class="col-md-3">
-
-                <h3>Workshops</h3>
-                <p>
-                  At The Girl Code, we plan to organise monthly workshops.We aim to instill an inherent sense of confidence, compatibility and capability in our students...<i color="pink">read more.</i>
-                </p>
-
-            </div>
-          </a>
-
-
-            <a href="https://medium.com/@girlscodetoo/our-curriculum-for-workshops-f27921418199">
-              <div class="col-md-3">
-
-            <h3>Our Curriculum </h3>
-            <p>
-              Feeling this pivotal need in society, we here at The Girl Code plan to reach out to young girls and alleviate this impediment in society...<i color="pink">read more.</i>
-            </p>
-
+         <a href="https://medium.com/@girlscodetoo/the-problem-eabb2386c3e9">
+          <div class="col-md-3">
+            <h3>The Problem</h3>
+              <p>
+                To Code or not to Code-that is the question most girls face today.
+                Why go into a field dominated by men? Why be completely alone and isolated there?...<i color="pink">read more.</i>
+              </p>
           </div>
         </a>
-        </div>
 
-        </div>
-      </section>
-      <!-- Blog end -->
+        <a href="https://medium.com/@girlscodetoo/plan-of-action-dc789aa23aee">
+          <div class="col-md-3">
+              <h3>The Solution</h3>
+              <p>
+                We will introduce girls between the ages of 10 to 13 to programming via learning Python. We have specially designed our website and...<i color="pink">read more.</i>
+              </p>
+          </div>
+       </a>
+
+        <a href="https://medium.com/@girlscodetoo/workshops-3e7dea8bd20a">
+          <div class="col-md-3">
+
+              <h3>Workshops</h3>
+              <p>
+                At The Girl Code, we plan to organise monthly workshops.We aim to instill an inherent sense of confidence, compatibility and capability in our...<i color="pink">read more.</i>
+              </p>
+          </div>
+        </a>
+
+
+          <a href="https://medium.com/@girlscodetoo/our-curriculum-for-workshops-f27921418199">
+            <div class="col-md-3">
+                <h3>Our Curriculum </h3>
+                <p>
+                    Feeling this pivotal need in society, we here at The Girl Code plan to reach out to young girls and alleviate this impediment in society...<i color="pink">read more.</i>
+                </p>
+            </div>
+          </a>
+      </div>
+
+      </div>
+    </section>
+    <!-- Blog end -->
 
       <!-- Social Footer -->
       <section class="footer">
@@ -210,9 +208,4 @@
 
     </body>
 
-   <script type="text/javascript">
-    document.getElementById("aboutus").onclick = function () {
-    location.href = "aboutus.html";
-};
-   </script>
 </html>

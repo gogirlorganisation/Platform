@@ -1,14 +1,24 @@
-{% load static %}
-<link rel="stylesheet" href="{% static 'accounts/login.css' %}" type="text/css">
+<html>
+    <head>
+        <title> Sign up | The Girl Code</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'accounts/login.css' %}" type="text/css">
 
-<div class="container">
-  <h1>Create Your Account</h1>
-  <form method="post">
-      {% csrf_token %}
+    </head>
 
-      {{ form.as_p }}
+    <body>
 
-      <center><button type="submit">Sign Up</button></center>
-  </form>
+        <div class="container">
+          <h1>Create Your Account</h1>
+          <form method="post">
+              {% csrf_token %}
 
-</div>
+              {{ form.as_p }}
+
+              <center><button type="submit">Sign Up</button></center>
+          </form>
+        </div>
+
+    </body>
+
+</html>

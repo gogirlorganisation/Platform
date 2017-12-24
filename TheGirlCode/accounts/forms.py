@@ -35,7 +35,6 @@ class EditProfileForm(UserChangeForm):
         fields = (
             'username',
             'email',
-            'password'
         )
 
 

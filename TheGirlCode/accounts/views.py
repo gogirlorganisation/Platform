@@ -36,12 +36,6 @@ def view_profile(request):
 
 
 @login_required
-def settings_profile(request):
-
-    return render(request, 'accounts/settings.html')
-
-
-@login_required
 def edit_profile(request):
 
     if request.method == 'POST':  # When user is submitting the updated info
@@ -74,7 +68,7 @@ def change_password(request):
     else:
         form = PasswordChangeForm(user=request.user)
 
-        return render(request, 'accounts/editprofile.html', {'form': form1})
+        return render(request, 'accounts/changepassword.html', {'form': form})
 
 @login_required
 def course_1(request):
@@ -86,13 +80,13 @@ def course_1(request):
     if request.method == 'POST':
         form = CourseForm1(request.POST, instance=profile)
         if form.is_valid():
-            form.save()
-
             ans = form.cleaned_data['answer_1']
 
-            if ans == "Hello World" and profile.answer_1 != "Hello World":
-                profile.progress += 1
+            if ans == "Hello World" and profile.answer_1_check == False:
+                profile.progress += 10
+                profile.answer_1_check = True
                 profile.save()
+            form.save()
 
         args = {'user': profile, 'form': form, 'ans':ans}
 
@@ -103,4 +97,36 @@ def course_1(request):
 
         args = {'user': profile, 'form': form}
         return render(request, 'accounts/course_1.html', args)
+
+
+def course_2(request):
+    return render(request, 'accounts/course_2.html')
+
+
+def course_3(request):
+    return render(request, 'accounts/course_3.html')
+
+
+def course_4(request):
+    return render(request, 'accounts/course_4.html')
+
+
+def course_5(request):
+    return render(request, 'accounts/course_5.html')
+
+
+def course_6(request):
+    return render(request, 'accounts/course_6.html')
+
+
+def course_7(request):
+    return render(request, 'accounts/course_7.html')
+
+
+def course_8(request):
+    return render(request, 'accounts/course_8.html')
+
+
+def course_9(request):
+    return render(request, 'accounts/course_9.html')
 

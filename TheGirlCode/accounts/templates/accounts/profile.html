@@ -31,13 +31,21 @@
 
         <ul class="leftalign">
           <li><a style="color: rgba(255, 51, 85, .85)" href="{% url 'accounts:profile' %}">
-              {{user.username}}
+              The Girl Code
              </a></li>
         </ul>
 
         <ul>
-         <li><a href="{% url 'accounts:course' %}"> Course </a></li>
-         <li><a href=" {% url 'accounts:settings' %}"> Settings</a></li>
+         <li>
+             {% if user.userprofile.progress > 30 %}
+             <a href="{% url 'accounts:course2' %}"> Course</a>
+             {% else %}
+             <a href="{% url 'accounts:course2' %}"> Course</a>
+             {% endif %}
+         </li>
+         <li><a href="{% url 'accounts:profile' %}"> Settings</a></li>
+         <li><a href="{% url 'accounts:edit_profile' %}"> Edit Profile</a></li>
+         <li><a href="{% url 'accounts:change_password' %}"> Change Password </a> </li>
          <li><a href=" {% url 'accounts:logout' %}"> Logout</a></li>
         </ul>
       </nav>

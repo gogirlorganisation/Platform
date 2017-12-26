@@ -43,9 +43,13 @@
              <a href="{% url 'accounts:course2' %}"> Course</a>
              {% endif %}
          </li>
-         <li><a href="{% url 'accounts:profile' %}"> Settings</a></li>
-         <li><a href="{% url 'accounts:edit_profile' %}"> Edit Profile</a></li>
-         <li><a href="{% url 'accounts:change_password' %}"> Change Password </a> </li>
+         <li class="dropdown">
+            <a style="color: rgba(255, 51, 85, .85);">Dropdown</a> 
+            <div class="dropdown-content">
+              <a href="#">Edit Profile</a>
+              <a href="#">Change Password</a>
+            </div>
+         </li> 
          <li><a href=" {% url 'accounts:logout' %}"> Logout</a></li>
         </ul>
       </nav>

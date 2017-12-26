@@ -44,9 +44,14 @@
           <ul>
             <li><a href="{% url 'about_us' %}">About us</a></li>
             <li><a href="{% url 'workshops' %}"> Workshops</a></li>
-            <li><a href="#"> Platform</a></li>
-            <li><a href="{% url 'accounts:login' %}"> Log in </a></li>
-            <li><a href="{% url 'accounts:register' %}"> Sign up</a></li>
+              <li class="dropdown">
+              <a>Dropdown</a> 
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </li> 
           </ul>
         </nav>
       </header>

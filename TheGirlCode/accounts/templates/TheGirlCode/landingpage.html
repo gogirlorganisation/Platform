@@ -45,11 +45,10 @@
             <li><a href="{% url 'about_us' %}">About us</a></li>
             <li><a href="{% url 'workshops' %}"> Workshops</a></li>
               <li class="dropdown">
-              <a>Dropdown</a> 
+              <a>Platform</a>
               <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <a href="{% url 'accounts:register' %}">Sign up</a>
+                <a href="{% url 'accounts:login' %}">Log in</a>
               </div>
             </li> 
           </ul>

@@ -1,0 +1,206 @@
+{% extends 'accounts/course/course_base.html' %}
+
+{% block body %}
+
+{% load static %}
+
+
+      <div class="nine columns child">
+
+        <div data-content="landing">
+          <br>
+          <br>
+
+          
+          <div class="question">
+
+            <h1> Basic Introduction &middot; Python</h1>
+
+            <p>
+              Greetings, code enthusiast! My name is Eve and I’m going to guide you through your journey of learning Python. 
+              <br>
+              <br>
+              Some words will be underlined and can be clicked upon for explanation  <u><b>like this</b></u> ( Good job! You’ve opened up an explanation for ‘like this’ and you can do it <b><u>again!</u></b> ( Wow, you’re terrific at this!) 
+              <br>
+              <br>
+
+              A computer program is the set of instructions that tell that the dumb hardware  (mouse,keyboard,desktop-the physical parts of a computer)  what to do. 
+
+              <br>
+              <br>
+      
+          
+              A programming language is simply a means to communicate with the computer—a way to use instructions that the human and the computer can understand. Python is one such language!
+
+              <br>
+              <br>
+      
+
+               A computer program is made of <u><b>algorithms.</u></b> (An algorithm is like a recipe: if you’ve ever cooked, you probably know that you are made to follow certain steps. Say, you want to make a glass of coffee. You would first put the coffee powder, then pour the milk, and then stir. For computers, this step-by-step instruction is called an Algorithm.)
+
+               <br>
+               <br>
+
+              Programmers use comments to explain what a section of the code does for someone who’s viewing the program, so even the layman can understand what this ‘coding’ is all about. It's written after the symbol // .
+
+              <br>
+              <br>
+
+              <code> print("Hello World") // this is a comment </code>
+              
+              <br>
+              <br>
+
+               The sad part is that computers don’t understand English or Hindi – they have their own languages. When an algorithm is written in one of these languages, it becomes a Program. This is what you’ll learn over the next few days!
+
+
+
+            </p>
+              
+              <h1> Operators </h1>
+              <p>
+              The basic symbols used by Python to perform mathematical operations are called <i>operators</i>:
+
+              <ul>
+              <li> Addition (+)</li>
+              <li> Subtraction (-) </li>
+              <li> Multiplication (*) </li>
+              <li> Division for Quotient (/) </li>
+              <li> Modulo (%) </li>
+              </ul>
+
+
+              <br>
+
+              What does Modulo do, you may ask? Well it’s quite simple.
+              <br>
+              Try figuring out what it does:
+              <br>
+              1 % 4 = 1 <br>
+              15 % 4 = 3 <br>
+              10 % 4 = 2 <br>
+              <br>
+              Got it? Yes, you’re right! Modulo returns the remainder.
+              <br>
+              4 x 0 + <b> 1 </b><br>
+              4 x 3 + <b> 3 </b><br>
+              4 x 2 + <b> 2 </b><br>
+
+              Good work!
+              <br>
+              <br>
+
+              Python follows BODMAS rules. For example, if you enter <br> 
+              5+6 *10 <br>
+              5 and 10 are multiplied and 6 is added to the result- the answer is 56 and <b> not </b>110.
+
+              <br>
+              <br>
+
+              We use brackets () to correct this. The bracket tells Python to perform the operation inside it first.<br>
+              ( 5+6) *10= 110. <br>
+              Here, the operation inside the brackets is performed first, so 11 is multiplied to 10.<br><br>
+
+              The < sign means "less than," and the > sign "greater than" in Python.<br>
+
+              <b> boolean operators </b>
+              <br>
+              <br>
+              </p>
+
+
+              <h1> Variables </h1>
+              <p>
+              Just like your brain, the computer also has memory where it stores <b> <u> data </b> </u>(pieces of information).<br> <br> 
+              A variable is used to store information. It also be called a <b>label</b> for something.<br><br>
+        
+              Let’s create a variable <var> <span style="color:red">red </span></var> and tell Python that it labels the number 100 (this doesn’t mean that another variable can’t have the same value): 
+
+              <br>
+              <br>
+
+              <code> red = 100 </code>
+
+              <br>
+              <br>
+                    
+              Now to display what the variable contains, type:
+
+              <br>
+              <br>
+          
+              <code> print (red) </code>
+
+              <br>
+              <br>
+
+              Output: <samp> 100 </samp> 
+
+              <br> 
+              <br>
+          
+              We can also use more than one label (more than one variable) for the same item:
+
+              <br>
+              <br>
+          
+              <code>red = 200</code> 
+              <br>
+              <br>
+              <code>blue = red</code> 
+              <br>
+              <br>
+              <code>print(blue)</code> 
+
+              <br> 
+              <br>
+
+              Output: <samp> 200 </samp>
+
+              <br>
+              <br>
+                        
+              Variable names can be made up of: 
+              <br>
+              <ul>
+                <li> Letters and Numbers ( eg: var1, var45) </li>
+                <li>the underscore character (_)</li> 
+              </ul>
+      
+             But remember that they can’t <b> start with a number </b> <br> <br>
+               Go on and make a variable <var> year </var> of value   2018.
+<br> <br>
+
+The numbers stored are a special type of data i.e <u><b>integer </b></u>(negative and positive numbers without a decimal point eg: -5, 100, 0). <br> <br>
+              </p>
+
+            </div>
+
+          <h1> Questions &middot; Python</h1>
+          <div class="question">
+
+            <form method="POST">
+              {% csrf_token %}
+               <p>1. <code>Print ("Hello World") </code></p>
+               <br>
+               {{ form.answer_1 }}
+               <br>
+               <br>
+              <button type="submit"> Submit </button>
+            </form>
+            <br>
+            {% if  user.answer_1 == "Hello World" %}
+            <p> Correct </p>
+            <img src = "{% static 'accounts/curriculum/Images/happy.png' %}"/>
+            {% else %}
+            <p> Try again </p>
+            <img src = "{% static 'accounts/curriculum/Images/sad.png' %}"/>
+            {% endif %}
+
+          </div>
+
+
+
+      </div>
+
+{% endblock %}

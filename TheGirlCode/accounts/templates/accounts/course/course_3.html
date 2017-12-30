@@ -1,0 +1,128 @@
+{% extends 'accounts/course/course_base.html' %}
+
+{% block title %} 3 {% endblock %}
+
+{% block body %}
+
+{% load static %}
+
+
+      <div class="nine columns child">
+
+        <div data-content="landing">
+          <br>
+          <br>
+
+          
+          <div class="question">
+
+            <h1> Conditional Flow&middot; Python</h1>
+
+            <p>
+              Is there anything worse than getting soaked in the cold rain? 
+              Eve certainly doesn’t think so. Should she take an umbrella with her when she leaves the house? The logical solution to Eve’s dilemma would be-<br> <br>
+
+              if  it is raining :  <br> <br>
+              carry an umbrella<br> <br>
+
+              else:<br> <br>
+              do not carry an umbrella 
+
+              <br> 
+              <br>
+
+              Similarly, let's tackle another problem. If a child is older than 12, we usually refer to them as teenagers.Let’s create a program for that.<br>
+
+              Take the user’s age as the input and save it in a variable.
+              <br> <br>
+              If age is more than 12<br>
+              print(“Welcome to the teen years!”) <br> <br>
+
+              <ul> Here we can use conditions like:
+              <li> == Equal to </li>
+              <li>! = Not equal to </li>
+              <li> > Greater than </li>
+              <li> < Less than</li>
+              </ul>
+
+              So, <br> 
+
+              <code> if age > 12 :</code> <br> <br>
+              &emsp;&emsp;
+              <code> print (“Welcome to the teen years!”) </code>
+
+                 <br> <br>
+
+                Note: A colon ie, ' : ' has to be added after <b> every </b> if condition. If the colon is not placed after the condition, there will be a syntax error in your program.
+
+                <br> <br>
+                    
+                        
+                Want to know if you have enough chocolates or not? Simple! Set a condition. If you have more than 25 chocolates, you’re Willy Wonka!
+
+                <br> <br>
+
+                <b>Some kind of picture depicting that </b> <br> <Br>
+
+                <code> If Number_of_choc > 25: </code> <br> <br>
+                &emsp;&emsp;
+                <code>print(“Greetings,Willy Wonka!”)</code><br>
+
+                <br> <br> 
+
+                But wait..what if you wish to inform the user that they don't have enough chocolates? Well you have <code> else </code> to the rescue!
+
+                <br> <br>
+
+                <code> If Number_of_choc > 25: </code> <br> <br>
+                &emsp;&emsp;
+                <code> print(“Greetings,Willy Wonka!”) </code> <br> <br>
+                <code>else:</code> <br> <br>
+                &emsp;&emsp;
+                <code>print(“Not everyone can be a genius chocolate inventor!”) <br> <br>
+                 </code> 
+                    
+                Okay Willy Wonka, we have another situation at hand! You’re throwing a party for all your friends but, it’ll only be successful if there is an even number of guests so that  they can all be paired. If the guests are odd in number, one of them will be left out and your party will be a disaster :( <br> <br>
+
+              <code>If ( number_of_people % 2 == 0): <br> <br> </code>
+              &emsp;&emsp;
+              <code>print(“Good work! Your party was a success!”)</code> <br> <br>
+              <code> else:  </code> <br> <br>
+              &emsp;&emsp;
+              <code> print(“One of your guests was alone. Your party failed") </code> <br> <br>
+
+              </code>
+
+
+            </p>
+          </div>
+          
+
+          <h1> Questions &middot; Python</h1>
+          <div class="question">
+
+            <form method="POST">
+              {% csrf_token %}
+               <p>1. <code>Print ("Hello World") </code></p>
+               <br>
+               {{ form.answer_1 }}
+               <br>
+               <br>
+              <button type="submit"> Submit </button>
+            </form>
+            <br>
+            {% if  user.answer_1 == "Hello World" %}
+            <p> Correct </p>
+            <img src = "{% static 'accounts/curriculum/Images/happy.png' %}"/>
+            {% else %}
+            <p> Try again </p>
+            <img src = "{% static 'accounts/curriculum/Images/sad.png' %}"/>
+            {% endif %}
+
+          </div>
+
+
+
+      </div>
+
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'accounts/course/course_base.html' %}
+
+{% block title %} 6 {% endblock %}
+
+{% block body %}
+
+{% load static %}
+
+
+      <div class="nine columns child">
+
+        <div data-content="landing">
+          <br>
+          <br>
+
+          
+          <div class="question">
+
+            <h1> Functions &middot; Python</h1>
+
+            <p>
+              
+
+
+Ever opened your book and seen tens of pages of the syllabus you have to read for a test? Don’t you wish there could be something more concise? <br> <br>
+That’s exactly what we want in a program – it should be as short and efficient as possible!  <br>
+You have used the function len() earlier, which is a <i>built-in function</i> that returns the length of the string entered (P.S - It can also calculate the length of a list, but we’ll come to that later)  and therefore we don’t need to <b>define</b> it.<br> <br> 
+Some more built in functions you’ve learnt are, <br>
+Print() and all the functions you used to move your turtle! <br> <br>
+
+But what if you want to create a function for something that doesn’t have a predefined one? There exist <b>user-defined functions</b> which you (i.e the user) have to create. The first step is to define your function, give it a name and parameter: let’s talk about Mathematics, in Trigonometry you have  functions (sin x, cos x, tan x), now they do not make sense <b>at all</b> if a value for <b>x</b> isn’t given. Here, x is our <b>parameter</b> and that’s exactly what we need in coding too! <br> <br>
+So let’s define a function <i>add</i> that adds two numbers given as parameters <br> <br>
+<code> def add(m, n):
+       return m + n
+print add(123, 77) </code> <br> <br>
+
+Once you call the function (use the function in your program), the parameters provided within the brackets are used to carry it out(in this example, we carry out an addition function). The variable m will have the value of 123,  n of 77 and the function yields their sum. <Br> 
+
+
+
+Note : That colon present after the bracket is important, do not forget to add it after defining a function, else there will be an error. <br> <br>
+
+We can create a function using strings too. <br> <Br>
+<code> def statement(name) 
+       print (name + “, you’re doing amazing sweetie”) </code> <br> <br>
+Can you create a few functions on your own?
+<br><br>
+
+You might be wondering what <i>exactly </i> functions <b>do</b>.Functions mainly help us shorten our program, letting us avoid writing the same statements over and over again. Can you imagine typing the same greeting for over 100 people Now that sounds horrid! So instead of doing that, we could use functions and further reduce the load by using loops (How? That’s for you to figure out!).
+<br>
+<br>
+               
+              </p>
+
+            </div>
+
+          <h1> Questions &middot; Python</h1>
+          <div class="question">
+
+            <form method="POST">
+              {% csrf_token %}
+               <p>1. <code>Print ("Hello World") </code></p>
+               <br>
+               {{ form.answer_1 }}
+               <br>
+               <br>
+              <button type="submit"> Submit </button>
+            </form>
+            <br>
+            {% if  user.answer_1 == "Hello World" %}
+            <p> Correct </p>
+            <img src = "{% static 'accounts/curriculum/Images/happy.png' %}"/>
+            {% else %}
+            <p> Try again </p>
+            <img src = "{% static 'accounts/curriculum/Images/sad.png' %}"/>
+            {% endif %}
+
+          </div>
+
+
+
+      </div>
+
+{% endblock %}

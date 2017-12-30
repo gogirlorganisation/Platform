@@ -1,0 +1,98 @@
+{% extends 'accounts/course/course_base.html' %}
+
+{% block title %} 5 {% endblock %}
+
+{% block body %}
+
+{% load static %}
+
+
+      <div class="nine columns child">
+
+        <div data-content="landing">
+          <br>
+          <br>
+
+          
+          <div class="question">
+
+            <h1> Turtle &middot; Python</h1>
+
+            <p>
+            Turtle Graphics
+  
+ Want to bring your programs to life? <br>
+ You can do so easily, with a little something called <b> Turtle </b>. <br> <br>
+ Python has a special module called turtle that we can use to learn how computers draw pictures on a screen. The turtle module is a way of programming vector graphics, which is basically just drawing with simple lines, dots, and curves. <br> <br>
+
+To use turtle you need to install turtle on your compiler, which can be done easily with this simple command: <br> <br>
+<code> import turtle </code> <br>
+You must copy -paste this code onto your compiler to get started. 
+Now it’s time to name your turtle! <br> <br>
+<code> eve = turtle.Turtle() </code>
+Guess what?  <br>
+You can now use functions to move  your turtle Eve! <br><br>
+<code> eve.forward() </code> <br>
+<code> eve.backward() </code><br>
+<code> eve.right() </code><br>
+<code> eve.left() </code>
+
+              <br>
+              <br>
+      <code>eve.forward(50)</code>
+        
+      
+    
+            
+      <br> <Br>
+        
+          
+The turtle has moved forward 50<u> <b> pixels.</u> </b> A pixel (is a single point on the screen—the smallest element that can be represented. Everything you see on your computer monitor is made up of pixels, which are tiny, square dots.)
+
+              <br>
+          
+To erase the canvas, enter reset. This clears the canvas and puts the turtle back at its starting position. <br> <br>
+          
+<code> eve.reset() </code> <br> 
+You can also use clear, which just clears the screen and leaves
+          
+the turtle where it is. <br> <br>
+          
+<code> eve.clear()</code>
+
+
+
+               
+              </p>
+
+            </div>
+
+          <h1> Questions &middot; Python</h1>
+          <div class="question">
+
+            <form method="POST">
+              {% csrf_token %}
+               <p>1. <code>Print ("Hello World") </code></p>
+               <br>
+               {{ form.answer_1 }}
+               <br>
+               <br>
+              <button type="submit"> Submit </button>
+            </form>
+            <br>
+            {% if  user.answer_1 == "Hello World" %}
+            <p> Correct </p>
+            <img src = "{% static 'accounts/curriculum/Images/happy.png' %}"/>
+            {% else %}
+            <p> Try again </p>
+            <img src = "{% static 'accounts/curriculum/Images/sad.png' %}"/>
+            {% endif %}
+
+          </div>
+
+
+
+      </div>
+
+
+{% endblock %}

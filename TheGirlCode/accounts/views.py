@@ -70,6 +70,11 @@ def change_password(request):
 
         return render(request, 'accounts/changepassword.html', {'form': form})
 
+
+def compiler(request):
+    return render(request, 'accounts/compiler.html')
+
+
 @login_required
 def course_1(request):
     try:
@@ -90,43 +95,43 @@ def course_1(request):
 
         args = {'user': profile, 'form': form, 'ans':ans}
 
-        return render(request, 'accounts/course_1.html', args)
+        return render(request, 'accounts/course/course_1.html', args)
 
     else:
         form = CourseForm1(instance=profile)
 
         args = {'user': profile, 'form': form}
-        return render(request, 'accounts/course_1.html', args)
+        return render(request, 'accounts/course/course_1.html', args)
 
 
 def course_2(request):
-    return render(request, 'accounts/course_2.html')
+    return render(request, 'accounts/course/course_2.html')
 
 
 def course_3(request):
-    return render(request, 'accounts/course_3.html')
+    return render(request, 'accounts/course/course_3.html')
 
 
 def course_4(request):
-    return render(request, 'accounts/course_4.html')
+    return render(request, 'accounts/course/course_4.html')
 
 
 def course_5(request):
-    return render(request, 'accounts/course_5.html')
+    return render(request, 'accounts/course/course_5.html')
 
 
 def course_6(request):
-    return render(request, 'accounts/course_6.html')
+    return render(request, 'accounts/course/course_6.html')
 
 
 def course_7(request):
-    return render(request, 'accounts/course_7.html')
+    return render(request, 'accounts/course/course_7.html')
 
 
 def course_8(request):
-    return render(request, 'accounts/course_8.html')
+    return render(request, 'accounts/course/course_8.html')
 
 
 def course_9(request):
-    return render(request, 'accounts/course_9.html')
+    return render(request, 'accounts/course/course_9.html')
 

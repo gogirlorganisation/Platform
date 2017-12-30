@@ -31,9 +31,10 @@
   <link rel="apple-touch-icon-precomposed" href="img/icon.png">
   <link href="https://fonts.googleapis.com/css?family=Cardo|Inconsolata|Source+Sans+Pro" rel="stylesheet">
   <!-- Icons end-->
-  
+
   <!-- Tab -->
-  <title>Course 1 | The Girl Code</title>
+
+  <title>Course {% block title %} 1 {% endblock %}| The Girl Code</title>
   <link rel="icon" href="{% static 'TheGirlCode/LandingPage/Images/logo_trans.png' %}">
   <!-- Tab end-->
 
@@ -50,6 +51,7 @@
              </a></li>
         </ul>
         <ul>
+         <li><a href="{% url 'accounts:compiler' %}"> Compiler </a></li>
          <li><a href="{% url 'accounts:profile' %}"> Profile </a></li>
          <li><a href=" {% url 'accounts:logout' %}"> Logout</a></li>
         </ul>
@@ -65,55 +67,55 @@
 
         <div class="rounds-list">
             <br>
-        <a href="{% url 'accounts:course1' %}">   
+        <a href="{% url 'accounts:course1' %}">
           <div class="list">
             <p>Basic Introduction</p>
           </div>
-        </a>  
+        </a>
 
-        <a href="{% url 'accounts:course2' %}"> 
-          <div class="list">
-            <p>Conditional Flow</p>
-          </div>
-        </a>  
-
-        <a href="{% url 'accounts:course3' %}">  
+        <a href="{% url 'accounts:course2' %}">
           <div class="list">
             <p>Strings</p>
           </div>
-        </a>  
+        </a>
 
-        <a href="{% url 'accounts:course4' %}"> 
+        <a href="{% url 'accounts:course3' %}">
+          <div class="list">
+            <p>Conditional Flow</p>
+          </div>
+        </a>
+
+        <a href="{% url 'accounts:course4' %}">
           <div class="list" >
             <p>Loops</p>
           </div>
-        </a>  
+        </a>
 
-        <a href="{% url 'accounts:course5' %}"> 
+        <a href="{% url 'accounts:course5' %}">
           <div class="list">
             <p>Turtle Graphics</p>
           </div>
-        </a>  
+        </a>
 
-        <a href="{% url 'accounts:course6' %}"> 
+        <a href="{% url 'accounts:course6' %}">
           <div class="list">
             <p>Functions</p>
           </div>
-        </a>  
+        </a>
 
-        <a href="{% url 'accounts:course7' %}"> 
+        <a href="{% url 'accounts:course7' %}">
           <div class="list">
             <p>Recursion</p>
           </div>
-        </a>  
+        </a>
 
-        <a href="{% url 'accounts:course8' %}"> 
+        <a href="{% url 'accounts:course8' %}">
           <div class="list">
             <p>Lists</p>
           </div>
-        </a>  
+        </a>
 
-        <a href="{% url 'accounts:course9' %}"> 
+        <a href="{% url 'accounts:course9' %}">
           <div class="list">
             <p>Sort and Search Algorithms</p>
           </div>
@@ -123,126 +125,11 @@
 
       </div>
 
-      <div class="nine columns child">
+        {% block body %}
 
-        <div data-content="landing">
-          <br>
-          <br>
-
-          
-          <div class="question">
-
-            <h1> Basic Introduction &middot; Python</h1>
-
-            <p>
-              Greetings, code enthusiast! My name is Eve and I’m going to guide you through your journey of learning Python. 
-              <br>
-              <br>
-              Some words will be underlined and can be clicked upon for explanation  <u><b>like this</b></u> ( Good job! You’ve opened up an explanation for ‘like this’ and you can do it <b><u>again!</u></b> ( Wow, you’re terrific at this!) 
-              <br>
-              <br>
-
-              A computer program is the set of instructions that tell that the dumb hardware  (mouse,keyboard,desktop-the physical parts of a computer)  what to do. 
-
-              <br>
-              <br>
-      
-          
-              A programming language is simply a means to communicate with the computer—a way to use instructions that the human and the computer can understand. Python is one such language!
-
-              <br>
-              <br>
-      
-
-              Programming is the process of taking an <u><b>algorithm</u></b> (A programming algorithm is a a lot like a recipe - the ingredients are called the inputs and the dish is the output which tells your computer precisely what steps to take to solve a problem.) and writing it in a language that the computer understands.
-
-            </p>
-          </div>
-              
-          <div class="question">
-              <h1> Variables </h1>
-              <p>
-              Just like your brain, the computer also has memory where it stores data (pieces of information).<br> 
-              A variable can also be called a <b>label</b> for something.<br> 
-        
-              Let’s create a variable <var> red </var> and tell Python that it labels the number 100 ( this doesn’t mean that another variable can’t have the same value): 
-
-              <br>
-
-              <code> red = 100 </code>
-
-              <br>
-                    
-              Now to display what the variable contains, type:
-
-              <br>
-          
-              <code> print (red) </code>
-
-              <br>
-
-              Output: <samp> 100 </samp> 
-
-              <br> 
-          
-              We can also use more than one label (more than one variable) for the same item:
-
-              <br>
-          
-              <code>red = 200</code> 
-              <br>
-              <code>blue = red</code> 
-              <br>
-              <code>print(blue)</code> 
-
-              <br> 
-
-              Output: <samp> 200 </samp>
-
-              <br>
-                        
-              Variable names can be made up of: 
-              <br>
-              <ul>
-                <li> Letters and Numbers ( eg: var1, var45) </li>
-                <li>the underscore character (_)</li> 
-                <br>
-              <b> but they can’t start with a number </b>
-               
-              </p>
-
-            </div>
-
-          <h1> Questions &middot; Python</h1>
-          <div class="question">
-
-            <form method="POST">
-              {% csrf_token %}
-               <p>1. <code>Print ("Hello World") </code></p>
-               <br>
-               {{ form.answer_1 }}
-               <br>
-               <br>
-              <button type="submit"> Submit </button>
-            </form>
-            <br>
-            {% if  user.answer_1 == "Hello World" %}
-            <p> Correct </p>
-            <img src = "{% static 'accounts/curriculum/Images/happy.png' %}"/>
-            {% else %}
-            <p> Try again </p>
-            <img src = "{% static 'accounts/curriculum/Images/sad.png' %}"/>
-            {% endif %}
-
-          </div>
+        {% endblock %}
 
 
-
-      </div>
-
-
-
-        
 
   <script src="//use.typekit.net/dbe5tbi.js"></script>
   <script>

@@ -23,6 +23,9 @@ urlpatterns = [
     # Register
     url(r'^register/$', views.register, name='register'),
 
+    # Compiler
+    url(r'^course/compiler/$', views.compiler, name='compiler'),
+
     # Curriculum 1
     url(r'^course-1/$', views.course_1, name='course1'),
 

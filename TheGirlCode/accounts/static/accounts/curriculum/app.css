@@ -108,12 +108,21 @@ h1 {
   text-align: center;
   font-size: 4rem !important;
   margin-top: 7% !important; }
-  h1 + p {
+
+ul {
+  font-size: 120%;
+  font-style: italic;
+}
+
+p {
+  font-size: 120%;
+}
+
+h1 + p {
     padding-top: 2.5rem;
     max-width: 600px;
     width: 90%;
-    margin: 0 auto;
-    font-size: 120%; }
+    margin: 0 auto; }
 
 h3 {
   font-family: 'Cardo', serif;

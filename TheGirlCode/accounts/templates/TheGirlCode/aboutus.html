@@ -34,20 +34,24 @@
 
     <!-- header -->
     <header class="navbar-fixed-top light">
-      <nav>
-        <ul class="leftalign">
-          <li><a style="color: rgba(255, 51, 85, .85)" href="{% url 'home' %}">
-            <img src="{% static 'TheGirlCode/LandingPage/Images/logo.png' %}" class="girllogo"/> </a></li>
-        </ul>
-        <ul>
-          <li><a href="{% url 'about_us' %}">About us</a></li>
-          <li><a href="{% url 'workshops' %}"">Workshops</a></li>
-          <li><a href="#">Platform</a></li>
-          <li><a href="{% url 'accounts:login' %}"> Log in </a></li>
-          <li><a href="{% url 'accounts:register' %}"> Sign up</a></li>
-        </ul>
-      </nav>
-    </header>
+        <nav>
+          <ul class="leftalign">
+            <li><a style="color: rgba(255, 51, 85, .85)" href="{% url 'home' %}">
+              <img src="{% static 'TheGirlCode/LandingPage/Images/logo.png' %}" class="girllogo"/></a></li>
+          </ul>
+          <ul>
+            <li><a href="{% url 'about_us' %}">About us</a></li>
+            <li><a href="{% url 'workshops' %}"> Workshops</a></li>
+              <li class="dropdown">
+              <a>Platform</a>
+              <div class="dropdown-content">
+                <a href="{% url 'accounts:register' %}">Sign up</a>
+                <a href="{% url 'accounts:login' %}">Log in</a>
+              </div>
+            </li> 
+          </ul>
+        </nav>
+      </header>
     <!-- header end -->
 
 

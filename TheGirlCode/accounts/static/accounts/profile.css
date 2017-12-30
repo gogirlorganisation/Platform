@@ -103,6 +103,10 @@ body {
     letter-spacing: 2px;
 }
 
+.portfolio_item .portfolio_item_hover .item_info p {
+    color: #fff;
+}
+
 .portfolio_item:hover .portfolio_item_hover {
     opacity: 1;
     -webkit-transform: translateX(0);

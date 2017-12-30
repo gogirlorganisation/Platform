@@ -76,10 +76,12 @@
       
               But remember that they can’t <b> start with a number </b> <br> <br>
 
+
               <br> <br>
 
               The numbers stored are a special type of data i.e <u><b>integer </b></u>(negative and positive numbers without a decimal point eg: -5, 100, 0). <br> <br>
               </p>
+              <p>
               You’ll use strings to display messages in your <b> <u>programs </b> </u> (such as “Game Over” messages in a game). <br> <br>
               In programming terms, we usually call text a string.     
               <br>
@@ -100,7 +102,7 @@
               Go on! Try it yourself!
               <br>
               <br>
-
+            </p>
               <h1> Length of a string </h1>
 
               <p>
@@ -164,7 +166,7 @@
 
                PICTURE OF HELLO LABBELED FROM 0-4 <br> <br>
 
-               Thus, "l" is printed!<br> <br>
+               Thus, "l" is printed!<br> <br></p>
 
        </div>
 
@@ -191,10 +193,10 @@
             <br>
             {% if  user.answer_1 == "Hello World" %}
             <p> Correct </p>
-            <img src = "{% static 'accounts/curriculum/Images/happy.png' %}"/>
+            <center><img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/></center>
             {% else %}
             <p> Try again </p>
-            <img src = "{% static 'accounts/curriculum/Images/sad.png' %}"/>
+            <center><img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/></center>
             {% endif %}
 
           </div>

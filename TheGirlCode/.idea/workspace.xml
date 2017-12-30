@@ -14,8 +14,22 @@
       <file leaf-file-name="workshops.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/accounts/templates/TheGirlCode/workshops.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+
+            <state relative-caret-position="330">
+              <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workshop.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/accounts/static/TheGirlCode/LandingPage/workshop.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2655">
+              <caret line="177" column="14" lean-forward="false" selection-start-line="177" selection-start-column="14" selection-end-line="177" selection-end-column="14" />
+
               <folding />
             </state>
           </provider>
@@ -44,7 +58,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/TheGirlCode/landing_page.html" />
         <option value="$PROJECT_DIR$/templates/accounts/login.html" />
         <option value="$PROJECT_DIR$/TheGirlCode/templates/TheGirlCode/index.html" />
         <option value="$PROJECT_DIR$/TheGirlCode/templates/thegirlcode/landingpage.html" />
@@ -94,13 +107,14 @@
         <option value="$PROJECT_DIR$/accounts/templates/accounts/course/course_5.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/course/course_6.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/course/course_7.html" />
+
         <option value="$PROJECT_DIR$/accounts/templates/TheGirlCode/workshops.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="398" />
-    <option name="y" value="111" />
+    <option name="x" value="458" />
+    <option name="y" value="116" />
     <option name="width" value="781" />
     <option name="height" value="664" />
   </component>
@@ -297,7 +311,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/logout.html" />
     <entry file="file://$PROJECT_DIR$/TheGirlCode/middleware.py" />
     <entry file="file://$PROJECT_DIR$/curriculum/admin.py" />
     <entry file="file://$PROJECT_DIR$/curriculum/apps.py" />
@@ -382,6 +395,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/accounts/templates/TheGirlCode/workshops.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -390,6 +404,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/accounts/static/TheGirlCode/LandingPage/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
@@ -401,13 +416,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/TheGirlCode/landingpage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="49" column="62" lean-forward="false" selection-start-line="49" selection-start-column="62" selection-end-line="49" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -550,6 +558,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="128" column="22" lean-forward="true" selection-start-line="128" selection-start-column="22" selection-end-line="128" selection-end-column="22" />
+
         </state>
       </provider>
     </entry>

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>User Profile | The Girl Code</title>
+    <title>Workshops | The Girl Code</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -19,41 +19,34 @@
     <link href="{% static 'Bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{% static 'accounts/profile.css' %}" rel="stylesheet">
     <link href="{% static 'TheGirlCode/LandingPage/master.css' %}" rel="stylesheet">
+    <link href="{% static 'TheGirlCode/LandingPage/style.css' %}" rel="stylesheet">
+    <link href="{% static 'TheGirlCode/LandingPage/workshop.css' %}" rel="stylesheet">
+
 
   </head>
 
   <body>
     <!-- header -->
-    <header class="navbar-fixed-top light">
-      <nav>
-
-        <ul class="leftalign">
-          <li><a style="color: rgba(255, 51, 85, .85)" href="{% url 'accounts:profile' %}">
-              The Girl Code
-             </a></li>
-        </ul>
-
-        <ul>
-         <li>
-             {% if user.userprofile.progress > 30 %}
-             <a href="{% url 'accounts:course2' %}"> Course</a>
-             {% else %}
-             <a href="{% url 'accounts:course2' %}"> Course</a>
-             {% endif %}
-         </li>
-         <li class="dropdown">
-            <a style="color: rgba(255, 51, 85, .85);">Settings</a>
-            <div class="dropdown-content">
-              <a href="{% url 'accounts:edit_profile' %}">Edit Profile</a>
-              <a href="{% url 'accounts:change_password' %}">Change Password</a>
-            </div>
-         </li> 
-         <li><a href=" {% url 'accounts:logout' %}"> Logout</a></li>
-        </ul>
-      </nav>
-    </header>
+      <header class="navbar-fixed-top light">
+        <nav>
+          <ul class="leftalign">
+            <li><a style="color: rgba(255, 51, 85, .85)" href="{% url 'home' %}">
+              <img src="{% static 'TheGirlCode/LandingPage/Images/logo.png' %}" class="girllogo"/></a></li>
+          </ul>
+          <ul>
+            <li><a href="{% url 'about_us' %}">About us</a></li>
+            <li><a href="{% url 'workshops' %}"> Workshops</a></li>
+              <li class="dropdown">
+              <a>Platform</a>
+              <div class="dropdown-content">
+                <a href="{% url 'accounts:register' %}">Sign up</a>
+                <a href="{% url 'accounts:login' %}">Log in</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
     <!-- header end -->
 
     <main role="main">
@@ -78,7 +71,11 @@
                         <div class="no-padding portfolio_container clearfix">
                             <!-- single work -->
                             <div class="col-md-4 col-sm-6">
+<<<<<<< Updated upstream
                                 <a id="demo01" href="#" class="portfolio_item"> <img src="{% static 'accounts/profile img/mis.jpg' %}" alt="Card image cap">
+=======
+                                <a id="demo01" href="#" class="portfolio_item"> <img class="image" src="{% static 'TheGirlCode/LandingPage/Images/mis.jpg' %}" alt="Card image cap">
+>>>>>>> Stashed changes
                                     <div class="portfolio_item_hover">
                                         <div class="portfolio-border clearfix">
                                             <div class="item_info">

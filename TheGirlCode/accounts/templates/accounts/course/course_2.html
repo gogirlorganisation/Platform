@@ -6,207 +6,235 @@
 
 {% load static %}
 
-      <div class="nine columns child">
+  <div class="nine columns child">
+    <div data-content="landing">
+      <div class="question">
 
-        <div data-content="landing">
-          <br>
-          <br>
+        <h1> Variables and Strings &middot; Python</h1>
 
-          
-          <div class="question">
-
-            <h1> Variables &middot; Python</h1>
-
-              <p>
-              Just like your brain, the computer also has memory where it stores <b> <u> data </b></u>(pieces of information).<br> <br> 
-              A variable is used to store information. It also be called a <b>label</b> for something.<br><br>
-        
-              Let’s create a variable <var> <span style="color:red">red </span></var> and tell Python that it labels the number 100 (this doesn’t mean that another variable can’t have the same value): 
-
-              <br>
-              <br>
-
-              <code> red = 100 </code>
-
-              <br>
-              <br>
-                    
-              Now to display what the variable contains, type:
-
-              <br>
-              <br>
-          
-              <code> print (red) </code>
-
-              <br>
-              <br>
-
-              Output: <samp> 100 </samp> 
-
-              <br> 
-              <br>
-          
-              We can also use more than one label (more than one variable) for the same item:
-
-              <br>
-              <br>
-          
-              <code>red = 200</code> 
-              <br>
-              <br>
-              <code>blue = red</code> 
-              <br>
-              <br>
-              <code>print(blue)</code> 
-
-              <br> 
-              <br>
-
-              Output: <samp> 200 </samp>
-
-              <br>
-              <br>
-                        
-              Variable names can be made up of: 
-              <br>
-              <ul>
-                <li> Letters and Numbers ( eg: var1, var45) </li>
-                <li>the underscore character (_)</li> 
-              </ul>
-      
-              <p>But remember that they can’t <b> start with a number </b> <br> <br>
-
-
-              <br> <br>
-
-              The numbers stored are a special type of data i.e <u><b>integer </b></u>(negative and positive numbers without a decimal point eg: -5, 100, 0). <br> <br>
-              </p>
-              <p>
-              You’ll use strings to display messages in your <b> <u>programs </b> </u> (such as “Game Over” messages in a game). <br> <br>
-              In programming terms, we usually call text a string.     
-              <br>
-              <br>
-              <code> var1 = "Taylor Swift is amazing!!" </code>
-
-              <br> <br>
-
-              Then, to see what’s inside<var> var1</var>, we could enter
-              <br> <br>
-              <code>print(var1)</code>.
-              <br>
-              <br>
-      
-              Output: <samp> Taylor Swift is amazing!! </samp>
-              <br> <br>
-
-              Go on! Try it yourself!
-              <br>
-              <br>
-            </p>
-              <h1> Length of a string </h1>
-
-              <p>
-
-              What if you want to know the length of your string? Like Hello contains 5 letters. <br> <br>
-
-              PICTURE OF HELLO WITH 1-5 LABELLED
-              <br> <br>
-                      
-              Instead of counting each letter , all you need to do is use <code> len() </code><br> <br>
-
-              <code> len(“Hello”) </code><br> <br>
-
-              Output: <samp> 5 </samp><br> <br>
-
-              Or you could use it with variables! <br> <br>
-
-              <code> greetings = “Hello” </code><br> <br>
-              <code> len(greetings) </code><br> <br>
-
-              </p>
-
-              <h1> String Concatenation </h1>
-
-              <p>
-
-              You can easily add strings to build a complete sentence by using the addition operator-ie the ‘+’ . Crazy, right? 
-              <br> <br>
-              P.S. no using this in your english paper! We don’t want your English teacher to faint :P 
-              <br> <br>
-              Now,let’s frame a greeting, shall we?
-              <br> <br>
-
-
-              <code>name = “Eve”</code> <br> 
-              <code>print “Good” + “ afternoon” + name + “!” </code>
-              <br> <br> 
-              OUTPUT : Good afternoon Eve!
-              <br> <br>
-              Try creating a concatenation of the list of things you ate for breakfast! If you had milk and cereal then, <br> <br>
-
-              <code> print “Milk” + “ and” + “ cereal”</code>
-              <br> <br>
-              Do not forget to add space before each word, or your sentence would be one word instead , <i>Milkandcereal</i> and not <i>Milk and cereal</i>
-            </p>
-
-            <h1> Accessing String Elements </h1>
-
-            <p>
-              What if you want to access a particular letter in a string? Don't worry, all that you need to do is: <br> <br>
-
-              <code> var = "Hello" </code> <br> <br>
-              <code> var[2] // access the 2nd element of Hello </code><br> <br>
-              <code> print(var) </code><br> <br>
-
-              Guess what will be printed? <br> <br>
-               "e"? 
-               <br> <br>Wrong!
-               <br> <br>
-               There is a catch, programmers like counting from 0, so <br> <br>
-
-               PICTURE OF HELLO LABBELED FROM 0-4 <br> <br>
-
-               Thus, "l" is printed!<br> <br></p>
-
-       </div>
-
-       <div class="question">
-            
-
-</p>
-</div>
- <div class="question">
+        <p>
+          Just like your brain, the computer also has memory where it stores <b> <u> data </b></u>(pieces of information).<br> <br> 
+          A variable is used to store information. It also be called a <b>label</b> for something.<br><br>
     
+          Let’s create a variable <var> <span style="color:red">red </span></var> and tell Python that it labels the number 100 (this doesn’t mean that another variable can’t have the same value): 
 
-          <h1> Questions &middot; Python</h1>
-          <div class="question">
+          <br>
+          <br>
 
-            <form method="POST">
-              {% csrf_token %}
-               <p>1. <code>Print ("Hello World") </code></p>
-               <br>
-               {{ form.answer_1 }}
-               <br>
-               <br>
-              <button type="submit"> Submit </button>
-            </form>
-            <br>
-            {% if  user.answer_1 == "Hello World" %}
-            <p> Correct </p>
-            <center><img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/></center>
-            {% else %}
-            <p> Try again </p>
-            <center>
-              <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/>
-              <br> <br>
-              <p> Try again </p>
-            </center>
-            {% endif %}
+          <code> red = 100 </code>
 
-          </div>
+          <br>
+          <br>
+                
+          Now to display what the variable contains, type:
+
+          <br>
+          <br>
+      
+          <code> print (red) </code>
+
+          <br>
+          <br>
+
+          Output: <samp> 100 </samp> 
+
+          <br> 
+          <br>
+      
+          We can also use more than one label (more than one variable) for the same item:
+
+          <br>
+          <br>
+      
+          <code>red = 200</code> 
+          <br>
+          <br>
+          <code>blue = red</code> 
+          <br>
+          <br>
+          <code>print(blue)</code> 
+
+          <br> 
+          <br>
+
+          Output: <samp> 200 </samp>
+
+          <br>
+          <br>
+                    
+          Variable names can be made up of: 
+          <br>
+          <ul>
+            <li> Letters and Numbers ( eg: var1, var45) </li>
+            <li>the underscore character (_)</li> 
+          </ul>
+          
+          <br>
+
+        <p>
+          But remember that they can’t <b> start with a number. </b> <br> <br>
+
+          The numbers stored are a special type of data i.e <u><b>integer </b></u>(negative and positive numbers without a decimal point eg: 50, -100, 0). 
+          <br> 
+          <br>
+
+        </p>
+
+        <h1> Strings </h1>
+        <p>
+          You’ll use strings to display messages in your <b> <u>programs </b> </u> (such as “Game Over” messages in a game). <br> <br>
+          In programming terms, we usually call text a string.     
+          <br>
+          <br>
+          <code> var1 = "Taylor Swift is amazing!!" </code>
+
+          <br> <br>
+
+          Then, to see what’s inside<var> var1</var>, we could enter
+          <br> <br>
+          <code>print(var1)</code>.
+          <br>
+          <br>
+  
+          Output: <samp> Taylor Swift is amazing!! </samp>
+          <br> <br>
+
+          Go on! Try it yourself!
+          <br>
+          <br>
+        </p>
+
+        <h1> Length of a string </h1>
+
+        <p>
+
+          What if you want to know the length of your string? Like Hello contains 5 letters. <br> <br>
+
+        </p>
+
+          <!-- Hello12345 image -->
+          <center> <img src="{% static 'accounts/curriculum/Images/hello12345.png' %}" /> </center>
+          <!-- Hello image end -->
+
+        <p> 
+
+          Instead of counting each letter, all you need to do is use <code> len() </code><br> <br>
+
+          <code> len(“Hello”) </code><br> <br>
+
+          Output: <samp> 5 </samp><br> <br>
+
+          Or you could use it with variables! <br> <br>
+
+          <code> greetings = “Hello” </code><br> <br>
+          <code> len(greetings) </code><br> <br>
+
+        </p>
+
+        <h1> String Concatenation </h1>
+
+        <p>
+
+          You can easily add strings to build a complete sentence by using the addition operator-ie the ‘+’ . Crazy, right? 
+
+          <br> <br>
+
+          P.S. no using this in your english paper! We don’t want your English teacher to faint :P
+
+          <br> <br>
+
+          Now,let’s frame a greeting, shall we?
+
+          <br> <br>
+
+          <code>name = “Eve”</code> <br> 
+          <code>print “Good” + “ afternoon” + name + “!” </code>
+
+          <br> <br> 
+
+          OUTPUT : Good afternoon Eve!
+
+          <br> <br>
+
+          **Note: <code>name</code> is not inside <code> ""</code> as it's not a string but a variable! <br> <br>
+          Try creating a concatenation of the list of things you ate for breakfast! If you had milk and cereal then, <br> <br>
+
+          <code> print “Milk” + “ and” + “ cereal”</code>
+
+          <br> <br>
+
+          Do not forget to add space before each word, or your sentence would be one word instead , <i>Milkandcereal</i> and not <i>Milk and cereal</i>
+          </p>
+
+          <br>
+          <br>
+
+        <h1> Accessing String Elements </h1>
+
+        <p>
+          What if you want to access a particular letter in a string? Don't worry, all that you need to do is: <br> <br>
+
+          <code> var = "HELLO" </code> <br> <br>
+          <code> var[2] # access the 2nd element of Hello </code><br> <br>
+          <code> print(var) </code><br> <br>
+
+          Guess what will be printed? <br> <br>
+          <code> E</code>?
+
+          <br> <br>
+
+          Wrong!
+
+          <br> <br>
+
+          There is a catch, programmers like counting from 0, so <br> <br>
+
+          <!-- Hello01234 image -->
+          <center> <img src="{% static 'accounts/curriculum/Images/hello01234.png' %}" /> </center>
+          <!-- Hello image end -->
+          <br>
+
+        <p> 
+          Thus, <code>L</code> is printed!<br> <br>
+
+          Output: <samp> L</samp> 
+
+          <br> <br>
+
+          The postition alloted to each letter is known as it's index, thus this method is known as indexing.
+        </p>
+    </div>
 
 
+    <!-- Question Start -->
+    <div class="question">
+      <h1> Questions &middot; Python</h1>
+      <div class="question">
 
+        <form method="POST">
+          {% csrf_token %}
+           <p>1. <code>Print ("Hello World") </code></p>
+           <br>
+           {{ form.answer_1 }}
+           <br>
+           <br>
+          <button type="submit"> Submit </button>
+        </form>
+        <br>
+        {% if  user.answer_1 == "Hello World" %}
+        <p> Correct </p>
+        <center><img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/></center>
+        {% else %}
+        <p> Try again </p>
+        <center>
+          <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/>
+          <br> <br>
+          <p> Try again </p>
+        </center>
+        {% endif %}
       </div>
+    </div>
+    <!-- Question end --> 
+  </div>
 
 {% endblock %}

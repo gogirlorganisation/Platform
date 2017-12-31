@@ -1,10 +1,11 @@
 {% extends 'accounts/course/course_base.html' %}
 
-{% block title %} 7 {% endblock %}
+{% block title %} 6 {% endblock %}
 
 {% block body %}
 
 {% load static %}
+
 
       <div class="nine columns child">
 
@@ -15,53 +16,39 @@
           
           <div class="question">
 
-            <h1> Lists&middot; Python</h1>
+            <h1> Functions &middot; Python</h1>
 
             <p>
-             Eve wants to go grocery shopping, so, she makes a list of all the items she  needs. Her list contains the following items: <br> 
-             <ol>
-<li>Butter </li>
-<li>Bread</li>
- <li>Chocolate </li>
-<li>Carrots </li>
-
-<br><br>Python offers a tool called lists to keep track of related "things," or values.<br>
- To help Eve,let's make a list called shopping_list  and fill it with each of the items:<br>
- 
-<b>PICTURE LIST 0-3 items</b> <br> 
-Programmers like to count from 0. Hence, instead of having 1, 2, 3 and, 4 position numbers, we have 0, 1, 2 and, 3 position numbers! <br> <br>
- 
-
-<code>shopping_list = [“bread", "butter", carrots", "chocolate"]</code> <br> <br>
- 
-If we want to print the third item in the shopping_list (carrots) we can do so by entering its position in the list <i>(called the index position)</i> inside square brackets ([]), like this: <br> <Br>
-<code> print (shopping_list[2]) </code>
-<br> <br>
-
-<code>shopping_list = [“bread", "butter", carrots", "chocolate"] </code> <br> <br>
-For x in range(0,3): <br> 
-Print (shopping_list[x]) <br> <br> 
- 
-Eve forgot to add flour to her list! Oh no, however will she bake cake now?
-But, fear not..you can add flour to her shopping list  since there’s no limit for the length of the shopping list. <br>
-The syntax for appendment is:  <br> 
-<code>list_name.append(item)</code>
-<code>shopping_list.append(“flour”)
-           print shopping_list </code> <br> <br>
-Now using append(), the item can only be added to the end of the list. But do not fret, we can add the item to whichever position you like using another function <b>insert()</b> <br> <br>
-<code>list_name.insert(index number, item</code> <br> <br>
-<code>shopping_list.insert(1,”flour)</code>  <br>
-<code>print shopping_list</code> <br> <br> 
-
-Within the brackets first mention the desired  <i>index number</i>  and then the item. <br>
- Sometimes you need to remove something from the list, that can achieved by yet another function <b>remove()</b>. <br>
-Silly Eve forgot she already had a loaf of bread at home, so she needs our help to remove that item from the list.<Br> <br>
-<code>list_name.remove(item)</code> <br>
-OR <br>
-<code>shopping_list.remove(“bread”)<br>
-print shopping_list </code>
-
               
+
+
+Ever opened your book and seen tens of pages of the syllabus you have to read for a test? Don’t you wish there could be something more concise? <br> <br>
+That’s exactly what we want in a program – it should be as short and efficient as possible!  <br>
+You have used the function len() earlier, which is a <i>built-in function</i> that returns the length of the string entered (P.S - It can also calculate the length of a list, but we’ll come to that later)  and therefore we don’t need to <b>define</b> it.<br> <br> 
+Some more built in functions you’ve learnt are, <br>
+Print() and all the functions you used to move your turtle! <br> <br>
+
+But what if you want to create a function for something that doesn’t have a predefined one? There exist <b>user-defined functions</b> which you (i.e the user) have to create. The first step is to define your function, give it a name and parameter: let’s talk about Mathematics, in Trigonometry you have  functions (sin x, cos x, tan x), now they do not make sense <b>at all</b> if a value for <b>x</b> isn’t given. Here, x is our <b>parameter</b> and that’s exactly what we need in coding too! <br> <br>
+So let’s define a function <i>add</i> that adds two numbers given as parameters <br> <br>
+<code> def add(m, n):
+       return m + n
+print add(123, 77) </code> <br> <br>
+
+Once you call the function (use the function in your program), the parameters provided within the brackets are used to carry it out(in this example, we carry out an addition function). The variable m will have the value of 123,  n of 77 and the function yields their sum. <Br> 
+
+
+
+Note : That colon present after the bracket is important, do not forget to add it after defining a function, else there will be an error. <br> <br>
+
+We can create a function using strings too. <br> <Br>
+<code> def statement(name) 
+       print (name + “, you’re doing amazing sweetie”) </code> <br> <br>
+Can you create a few functions on your own?
+<br><br>
+
+You might be wondering what <i>exactly </i> functions <b>do</b>.Functions mainly help us shorten our program, letting us avoid writing the same statements over and over again. Can you imagine typing the same greeting for over 100 people Now that sounds horrid! So instead of doing that, we could use functions and further reduce the load by using loops (How? That’s for you to figure out!).
+<br>
+<br>
                
               </p>
 
@@ -93,6 +80,5 @@ print shopping_list </code>
 
 
       </div>
-
 
 {% endblock %}

@@ -10,32 +10,41 @@
       <div class="nine columns child">
 
         <div data-content="landing">
-          <br>
-          <br>
 
-          
           <div class="question">
 
             <h1> Conditional Flow &middot; Python</h1>
 
             <p>
-              Is there anything worse than getting soaked in the cold rain? 
-              Eve certainly doesn’t think so. Should she take an umbrella with her when she leaves the house? The logical solution to Eve’s dilemma would be-<br> <br>
 
-              if  it is raining :  <br> <br>
-              carry an umbrella<br> <br>
+               <!-- laptop image -->
+              <img src="{% static 'accounts/curriculum/Images/umbrellaeve.png' %}" align="right" width="30%"/> 
+              <!-- laptop image end -->
+              Is there anything worse than getting soaked in the cold rain? <br>
 
-              else:<br> <br>
-              do not carry an umbrella 
+              Eve certainly doesn’t think so.<br> Should she take an umbrella with her when she leaves the house? The logical solution to Eve’s dilemma would be-<br> <br>
+
+
+              if  it_is_raining :  <br> 
+              &emsp;&emsp;
+              carry_an_umbrella<br> 
+
+              else:<br> 
+              &emsp;&emsp;
+              do_not_carry_an_umbrella 
 
               <br> 
               <br>
 
-              Similarly, let's tackle another problem. If a child is older than 12, we usually refer to them as teenagers.Let’s create a program for that.<br>
+              Similarly, let's tackle another problem. If a child is older than 12, we usually refer to them as teenagers. Let’s create a program for that.<br><br>
 
-              Take the user’s age as the input and save it in a variable.
+              Take the user’s age as the input and save it in a variable <var> age </var>.
               <br> <br>
+
+              <code> age = input("Enter age")</code>
+              <br><br>
               If age is more than 12<br>
+              &emsp;&emsp;
               print(“Welcome to the teen years!”) <br> <br>
 
               <ul> Here we can use conditions like:
@@ -45,57 +54,62 @@
               <li> < Less than</li>
               </ul>
 
-              So, <br> 
+              <br>
+              <p>
+
+              So, <br> <br>
 
               <code> if age > 12 :</code> <br> <br>
               &emsp;&emsp;
-              <code> print (“Welcome to the teen years!”) </code>
+              <code> print ("Welcome to the teen years!") </code>
 
                  <br> <br>
 
-                Note: A colon ie, ' : ' has to be added after <b> every </b> if condition. If the colon is not placed after the condition, there will be a syntax error in your program.
+                **Note: A colon i.e. ' : ' has to be added after <b> every </b> if condition. If the colon is not placed after the condition, there will be a syntax error in your program.
+
+                Also, the space on the second line is part of the Python Syntax.
 
                 <br> <br>
-                    
-                        
+
+                Syntax: <br> <br>
+
+                <code> if <"some condition"> :</code> <br> <br>
+                &emsp;&emsp;
+                <code> action </code>
+
+                <br><br>
                 Want to know if you have enough chocolates or not? Simple! Set a condition. If you have more than 25 chocolates, you’re Willy Wonka!
 
                 <br> <br>
 
-                <b>Some kind of picture depicting that </b> <br> <Br>
+                <b>Some kind of picture depicting that </b> <br> <br>
 
-                <code> If Number_of_choc > 25: </code> <br> <br>
+                <code> Number_of_choc > 25: </code> <br> <br>
                 &emsp;&emsp;
-                <code>print(“Greetings,Willy Wonka!”)</code><br>
+                <code>print("Greetings,Willy Wonka!")</code><br>
 
                 <br> <br> 
 
-                But wait..what if you wish to inform the user that they don't have enough chocolates? Well you have <code> else </code> to the rescue!
+                But wait..what if you wish to inform the user that they don't have enough chocolates? Well, you have <code> else</code> to the rescue!
 
                 <br> <br>
 
-                <code> If Number_of_choc > 25: </code> <br> <br>
+                <code>if Number_of_choc > 25: </code> <br> <br>
                 &emsp;&emsp;
-                <code> print(“Greetings,Willy Wonka!”) </code> <br> <br>
+                <code> print("Greetings,Willy Wonka!") </code> <br> <br>
                 <code>else:</code> <br> <br>
                 &emsp;&emsp;
-                <code>print(“Not everyone can be a genius chocolate inventor!”) <br> <br>
-                 </code> 
+                <code>print("Not everyone can be a Willy Wonka!")  </code> <br> <br>
+                
                     
                 Okay Willy Wonka, we have another situation at hand! You’re throwing a party for all your friends but, it’ll only be successful if there is an even number of guests so that  they can all be paired. If the guests are odd in number, one of them will be left out and your party will be a disaster :( <br> <br>
 
-              <code>If ( number_of_people % 2 == 0): <br> <br> </code>
+              <code>if ( number_of_people % 2 == 0): </code> <br> <br>
               &emsp;&emsp;
-              <code>print(“Good work! Your party was a success!”)</code> <br> <br>
+              <code>print("Good work! Your party was a success!")</code> <br> <br>
               <code> else:  </code> <br> <br>
               &emsp;&emsp;
-              <code> print(“One of your guests was alone. Your party failed") </code> <br> <br>
-
-              INDENTATION
-
-              </code>
-
-
+              <code> print("One of your guests was alone.Failure!") </code> <br> <br>
             </p>
           </div>
           

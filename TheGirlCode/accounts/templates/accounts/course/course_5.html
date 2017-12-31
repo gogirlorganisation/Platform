@@ -10,10 +10,6 @@
       <div class="nine columns child">
 
         <div data-content="landing">
-          <br>
-          <br>
-
-          
           <div class="question">
 
             <h1> Turtle &middot; Python</h1>
@@ -21,78 +17,86 @@
             <p>
             Turtle Graphics
   
- Want to bring your programs to life? <br>
- You can do so easily, with a little something called <b> Turtle </b>. <br> <br>
- Python has a special module called turtle that we can use to learn how computers draw pictures on a screen. The turtle module is a way of programming vector graphics, which is basically just drawing with simple lines, dots, and curves. <br> <br>
+           Want to bring your programs to life? <br>
+           You can do so easily, with a little something called <b> Turtle </b>. <br> <br>
+           Python has a special module called turtle that we can use to learn how computers draw pictures on a screen. The turtle module is a way of programming vector graphics, which is basically just drawing with simple lines, dots, and curves. <br> <br>
 
-To use turtle you need to install turtle on your compiler, which can be done easily with this simple command: <br> <br>
-<code> import turtle </code> <br>
-You must copy -paste this code onto your compiler to get started. 
-Now it’s time to name your turtle! <br> <br>
-<code> eve = turtle.Turtle() </code>
-Guess what?  <br>
-You can now use functions to move  your turtle Eve! <br><br>
-<code> eve.forward() </code> <br>
-<code> eve.backward() </code><br>
-<code> eve.right() </code><br>
-<code> eve.left() </code>
+          To use turtle you need to install turtle on your compiler, which can be done easily with this simple command: <br> <br>
 
-              <br>
-              <br>
-      <code>eve.forward(50)</code>
-        
-      
-    
-            
-      <br> <Br>
-        
-          
-The turtle has moved forward 50<u> <b> pixels.</u> </b> A pixel (is a single point on the screen—the smallest element that can be represented. Everything you see on your computer monitor is made up of pixels, which are tiny, square dots.)
+          <code> import turtle </code> <br><br>
 
-              <br>
-          
-To erase the canvas, enter reset. This clears the canvas and puts the turtle back at its starting position. <br> <br>
-          
-<code> eve.reset() </code> <br> 
-You can also use clear, which just clears the screen and leaves
-          
-the turtle where it is. <br> <br>
-          
-<code> eve.clear()</code>
+          You must copy - paste this code onto your compiler to get started. 
 
+          Now it’s time to name your turtle! <br> <br>
 
+          <code> eve = turtle.Turtle() </code> <br> <br>
 
-               
-              </p>
+          Guess what?  <br>
 
-            </div>
+          You can now use functions to move  your turtle Eve! <br><br>
+          <code> eve.forward() </code> <br>
+          <code> eve.backward() </code><br>
+          <code> eve.right() </code><br>
+          <code> eve.left() </code>
 
-          <h1> Questions &middot; Python</h1>
-          <div class="question">
+          <br>
+          <br>
+        <code>eve.forward(50)</code>
 
-            <form method="POST">
-              {% csrf_token %}
-               <p>1. <code>Print ("Hello World") </code></p>
-               <br>
-               {{ form.answer_1 }}
-               <br>
-               <br>
-              <button type="submit"> Submit </button>
-            </form>
-            <br>
-            {% if  user.answer_1 == "Hello World" %}
-            <p> Correct </p>
-            <img src = "{% static 'accounts/curriculum/Images/happy.png' %}"/>
-            {% else %}
-            <p> Try again </p>
-            <img src = "{% static 'accounts/curriculum/Images/sad.png' %}"/>
-            {% endif %}
+        <br>
+        <br>
+   
+        The turtle has moved forward 50<u> <b> pixels.</u> </b> A <b><u>pixel</b></u> (is a single point on the screen—the smallest element that can be represented. Everything you see on your computer monitor is made up of pixels, which are tiny, square dots.)<br>
+                  
+        To erase the canvas, enter reset. This clears the canvas and puts the turtle back at its starting position. <br> <br>
+                  
+        <code> eve.reset() </code> <br> <br>
 
-          </div>
+        You can also use clear, which just clears the screen and leaves the turtle where it is. <br> <br>
+                  
+        <code> eve.clear()</code> <br> <br>
 
+        You can change the colour of your turtle: <br> <br>
 
+        <code>eve.color("blue")</code> <br> <br>
 
+        Let's make a square!<br><br>
+
+        <code>import turtle</code> <br> 
+        <code>eve = turtle.Turtle()</code> <br> 
+        <code>eve.color("blue")</code> <br> <br>
+
+        <code>eve.forward(50)</code> <br> 
+        <code>eve.left(90)</code> <br> 
+        <code>eve.forward(50)</code> <br> 
+        <code>eve.left(90)</code> <br> 
+        <code>eve.forward(50)</code> <br> 
+        <code>eve.left(90)</code> <br> 
+        <code>eve.forward(50)</code> <br> <br>
+
+        Ughhh, repeating so much code is never good. Let's apply a loop here! <br> <br>
+
+        <code>eve.forward(50)</code> <br> 
+        <code>eve.left(90)</code> <br> <br>
+
+        The block of code above is being repeated 4 times to create a square. Let's apply a for loop here.<br><br>
+
+        <code>import turtle</code> <br> 
+        <code>eve = turtle.Turtle()</code> <br> 
+        <code>eve.color("blue")</code> <br> <br>
+
+        <code> for x in range(0,4): #repeats the code block 4 times</code> <br> 
+        &emsp;&emsp;
+        <code>eve.forward(50)</code> <br> 
+        &emsp;&emsp;
+        <code>eve.left(90)</code> <br> <br>
+
+        Great!! Now you are ready to create anything that you want! Go on and explore!
+
+   
+        </p>
       </div>
+
 
 
 {% endblock %}

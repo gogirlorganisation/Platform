@@ -10,77 +10,8 @@
     <div data-content="landing">
       <div class="question">
 
-        <h1> Variables and Strings &middot; Python</h1>
+       <h1> Strings &middot; Python</h1>
 
-        <p>
-          Just like your brain, the computer also has memory where it stores <b> <u> data </b></u>(pieces of information).<br> <br> 
-          A variable is used to store information. It also be called a <b>label</b> for something.<br><br>
-    
-          Let’s create a variable <var> <span style="color:red">red </span></var> and tell Python that it labels the number 100 (this doesn’t mean that another variable can’t have the same value): 
-
-          <br>
-          <br>
-
-          <code> red = 100 </code>
-
-          <br>
-          <br>
-                
-          Now to display what the variable contains, type:
-
-          <br>
-          <br>
-      
-          <code> print (red) </code>
-
-          <br>
-          <br>
-
-          Output: <samp> 100 </samp> 
-
-          <br> 
-          <br>
-      
-          We can also use more than one label (more than one variable) for the same item:
-
-          <br>
-          <br>
-      
-          <code>red = 200</code> 
-          <br>
-          <br>
-          <code>blue = red</code> 
-          <br>
-          <br>
-          <code>print(blue)</code> 
-
-          <br> 
-          <br>
-
-          Output: <samp> 200 </samp>
-
-          <br>
-          <br>
-                    
-          Variable names can be made up of: 
-          <br>
-          <ul>
-            <li> Letters and Numbers ( eg: var1, var45) </li>
-            <li>the underscore character (_)</li> 
-          </ul>
-          
-          <br>
-
-        <p>
-          But remember that they can’t <b> start with a number. </b> <br> <br>
-
-          The numbers stored are a special type of data i.e <u><b>integer </b></u>(negative and positive numbers without a decimal point eg: 50, -100, 0). 
-          <br> 
-          <br>
-
-        </p>
-
-        <h1> Strings </h1>
         <p>
           You’ll use strings to display messages in your <b> <u>programs </b> </u> (such as “Game Over” messages in a game). <br> <br>
           In programming terms, we usually call text a string.     
@@ -201,8 +132,68 @@
 
           <br> <br>
 
-          The postition alloted to each letter is known as it's index, thus this method is known as indexing.
+          The postition alloted to each letter is known as it's index, thus this method is known as indexing. <br>
         </p>
+
+        <h1> String slicing </h1>
+
+        <p>
+          Want a part of your string? No worries! <br> <br>
+
+          <code> String[start_position:end_position]</code> <br> <br>
+
+          To get "Love" out of "Ada Lovelace" you need letters from the postion 4 to 8. <br> <br>
+
+          PICTURE  <br><br>
+
+          So, simply print: <br> <br>
+
+          <code> print("Ada Lovelace"[4:8])</code> <br> <br>
+
+          Output: <samp> Love</samp>
+
+
+        <h1> Lower and Upper </h1>
+
+        <p>
+
+          To change a string to lower case or upper case simply use string.upper() or string.lower(). <br> <br>
+
+          <code> name = "Eve"</code> <br>
+          <code> name_upper = name.upper()</code> <br>
+          <code> name_lower = name.lower()</code> <br>
+          <br>
+
+          Now you can simply print them! <br> <br>
+
+          <code> print(name)</code><br> <br>
+
+          Output: <samp> Eve</samp><br> <br>
+
+          <code> print(name_upper)</code><br> <br>
+
+          Output: <samp> EVE</samp><br> <br>
+
+          <code> print(name_lower)</code><br> <br>
+
+          Output: <samp> eve</samp><br> <br>
+        </p>
+
+        <h1> User Input </h1>
+
+          <p>
+            It might get boring to always define values for the variables...<br>
+            Let's do something exciting! Let's take an input from the user...Just follow along <br> <br>
+
+            Syntax: <code>input("statement")</code><br> <br>
+
+            <code> name = input("Enter your name")</code> <br> 
+            <code> print("Hi " + name)</code> <br> <br>
+
+            Paste this code into your compiler and run. The console prints the statement "Enter your name", now you can type the name and press <kbd> enter</kbd>.<br> Output is Hi with the name entered. Cool know? <br> <br>
+          <p>
+
+
     </div>
 
 

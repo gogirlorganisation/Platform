@@ -6,126 +6,113 @@
 
 {% load static %}
 
-      <div class="nine columns child">
+  <div class="nine columns child">
 
-        <div data-content="landing">
-          <br>
-          <br>
-
-          
-          <div class="question">
-
-            <h1> Loops &middot; Python</h1>
-
-            <p>
-              What’s the laziest thing, creature, or entity to have ever existed?
-Is it a sloth? A slug, maybe?<br>
-No..it’s a programmer!<br> 
-<br>
-
-Is there really anything worse than writing the same code again and again and again and again?<br>
-For instance, if you want <code> print (“hello”) </code> 100 times, you’re not going to repeat this code a 100 times. Instead, you’ll use a new feature- <b> loop .</b>
-<br>
-<br>
-
-<b>Some kind of picture depicting that</b>
-<br>
-<br> 
-
-<code> For <var> variable </var> in range(0,numberoftimes): </code> <br>
-  <code> code </code> <br>
-
-<code> for x in range(0,100): </code><br>
-<code> print(“hello”) </code> <br>
-<br>
+  <div data-content="landing">
+  <br>
+  <br>
 
 
-Here, the variable x will go(ie, iterate) from 1-100, printing <b>hello</b> each time it completes one iteration.
-<br>
-<br>
-You can even  print numbers between 2  numbers. For example, if you want to print numbers between 10 and 30:
-<br>
-<br>
+  <div class="question">
 
-<code> for x in range(10,30): </code> <br>
-<code> print(x) </code> <br>
+  <h1> Loops &middot; Python</h1>
 
+  <p>
+    What’s the laziest thing, creature, or entity to have ever existed?
+    Is it a sloth? A slug, maybe?<br>
+    No..it’s a programmer!<br> 
+    <br>
 
-              
-              <br>
-             *some kind of picture depicting that*
+    Is there really anything worse than writing the same code again and again and again and again?<br><br>
+    For instance, if you want <code> print (“hello”) </code> 100 times, you’re not going to repeat this code a 100 times. Instead, you’ll use a new feature- <b> loop .</b>
+    <br>
+    <br>
 
-Let’s apply the if-else statements we learned earlier to loops. <br>
-Suppose we want to check which numbers between 1-10, are even  and which are odd.
-<br>
-<br>
-<code>For x in range(1,10): <br>
-  If ( x%2 ==0) <br>
-    print (“even”) <br>
-  else<br>
-    print(“odd”) <br> <br>
-  </code>
+    Syntax:
+    <br>
 
+    <code> For <var> variable </var> in range(0,number_of_times):</code> <br>
+    &emsp;&emsp;
+    <code> action</code> <br><br>
 
+    To print hello 100 times:<br> <br>
 
-
-
+    <code> for x in range(0,100):</code><br>
+    &emsp;&emsp;
+    <code> print(“hello”)</code> <br>
+    <br>
 
 
+    Here, the variable x will go (iterate) from 1-100, printing <b>hello</b> each time it completes one iteration.
+    <br>
+    <br>
+    You can even  print numbers between 2 numbers. For example, if you want to make a 10-seconds party counter:
+    <br>
+    <br>
 
- No one likes to be disturbed while sleeping. Eve is really tired today and she wants to take a nap. She’s told her mum not to disturb her  <b> while </b> she’s sleeping. Once 
-she wakes up, her mother can give her chores as she is no longer sleeping. Her request condition expires or, is terminated, once she wakes up and is no longer sleeping.<br>
- This is the basic principle of a <b> While Loop </b>    
-<br>
-<br>
-The while loop tells the computer to do something as long as <b>the condition</b> is met. <br>
-The condition is evaluated, and if the condition is <b>true</b>, the code within the
-block is executed.  <br>
+    <code> for x in range(1,11): </code> <br>
+    &emsp;&emsp;
+    <code> print(x) </code> <br> <br>
 
-This repeats until the condition becomes false. <br> <br>
-The syntax for while loop is :
-while [a condition is True]: <br>
-    [do something]
+    Output: <samp> 1 2 3 4 5 6 7 8 9 10</samp> <br> <br>
 
+    **Note: In programming languages, the end postion is the number after the required number. <br> <br>
 
-              <br>
-              <br>
+    Let’s apply the if-else statements we learned earlier to loops. <br>
+    Suppose we want to check which numbers between 1-10, are even  and which are odd. <br> <br>
 
-              <code>a = 0    
-while a < 10:     <i>//this is the condition for the loop.</i>   <br>
-   a = a + 1  <br>
-   print a   <i>//the condition keeps getting evaluated till it becomes false. </i><br> <br>
-</code>
+    <code>For x in range(1,10):</code> <br>
+      &emsp;&emsp;
+      <code>if ( x%2 ==0)</code> <br>
+      &emsp;&emsp;&emsp;&emsp;
+        <code>print (“even”)</code> <br>
+      &emsp;&emsp;
+      <code>else</code><br>
+      &emsp;&emsp;&emsp;&emsp;
+        <code>print(“odd”)</code> <br> <br>
 
-</p>
-</div>
+    Good work! <br> <br>
 
+     No one likes to be disturbed while sleeping. <br> Eve is really tired today and she wants to take a nap. She’s told her mum not to disturb her  <b> while </b> she’s sleeping. <br> 
+     Once she wakes up, her mother can give her chores as she is no longer sleeping. Her request condition expires or, is terminated, once she wakes up and is no longer sleeping.<br>
+     This is the basic principle of a <b> While Loop </b>.    
+      <br>
+      <br>
 
-          <h1> Questions &middot; Python</h1>
-          <div class="question">
+      <code> while eve_is_sleeping:</code><br>
+      &emsp;&emsp;
+      <code> mother_can't_give_work</code><br><br>
 
-            <form method="POST">
-              {% csrf_token %}
-               <p>1. <code>Print ("Hello World") </code></p>
-               <br>
-               {{ form.answer_1 }}
-               <br>
-               <br>
-              <button type="submit"> Submit </button>
-            </form>
-            <br>
-            {% if  user.answer_1 == "Hello World" %}
-            <p> Correct </p>
-            <img src = "{% static 'accounts/curriculum/Images/happy.png' %}"/>
-            {% else %}
-            <p> Try again </p>
-            <img src = "{% static 'accounts/curriculum/Images/sad.png' %}"/>
-            {% endif %}
+    The while loop tells the computer to do something as long as <b>the condition</b> is True. <br>
+    The condition is evaluated, and if the condition is <b>True</b>, the code within the block is executed.  <br>
 
-          </div>
+    This repeats until the condition becomes false. <br> <br>
+    
+    Syntax:
+    <br><br>
 
+    <code> while <"condition"> :</code> <br> 
+    &emsp;&emsp;
+    <code> code which will run if the condition is true </code>
+    <br><br>
 
+    Let's print numbers from 1 to 10.<br><br>
 
-      </div>
+    <code> number = 1 </code> <br> <br>
+
+    <code> while(number <= 10) </code> <br> 
+    &emsp;&emsp;
+    <code> print number</code><br> 
+    &emsp;&emsp;
+    <code>number = number + 1 </code> <br> <br>
+
+    The loop will stop once the number exceeds 10.
+    <br> <br>
+
+    Output: <samp> 1 2 3 4 5 6 7 8 9 10</samp>
+
+    </p>
+  </div>
+
 
 {% endblock %}

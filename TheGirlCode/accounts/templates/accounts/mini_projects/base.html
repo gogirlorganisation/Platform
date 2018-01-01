@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<head>
+
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2979ff">
+  <!-- Meta tags end -->
+
+
+  <!-- CSS Files -->
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'accounts/curriculum/skeleton.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'accounts/curriculum/app.css'%}">
+
+  <!-- CSS Files end -->
+
+  <!-- bootstrap -->
+  <link href="{% static 'Bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'Bootstrap/creative.min.css' %}" rel="stylesheet">
+  <!-- bootstrap end -->
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="{% static 'TheGirlCode/LandingPage/master.css' %}" media="screen" title="no title">
+  <!-- stylesheet end -->
+
+  <!-- Icons -->
+  <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="apple-touch-icon-precomposed" href="img/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Cardo|Inconsolata|Source+Sans+Pro" rel="stylesheet">
+  <!-- Icons end-->
+
+  <!-- Tab -->
+
+  <title> {% block title %}  {% endblock %}| The Girl Code</title>
+  <link rel="icon" href="{% static 'TheGirlCode/LandingPage/Images/logo_trans.png' %}">
+  <!-- Tab end-->
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar-fixed-top light">
+      <nav>
+        <ul class="leftalign">
+          <li><a style="color: rgba(255, 51, 85, .85)" href="{% url 'accounts:profile' %}">
+              The Girl Code
+             </a></li>
+        </ul>
+        <ul>
+         <li><a href="{% url 'accounts:compiler' %}"> Compiler </a></li>
+         <li><a href="{% url 'accounts:profile' %}"> Profile </a></li>
+         <li><a href=" {% url 'accounts:logout' %}"> Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Navbar end -->
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="three columns child">
+
+        <div class="rounds-list">
+            <br>
+        <a href="{% url 'accounts:rps' %}">
+          <div class="list">
+            <p>Rock, Paper & Scissors</p>
+          </div>
+        </a>
+
+        <a href="{% url 'accounts:calc' %}">
+          <div class="list">
+            <p>Calculator </p>
+          </div>
+        </a>
+
+        <a href="{% url 'accounts:pyglatin' %}">
+          <div class="list">
+            <p>Pyglatin</p>
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="list" >
+            <p>Turtle</p>
+          </div>
+        </a>
+
+
+        </div>
+
+      </div>
+
+        {% block body %}
+
+        {% endblock %}
+
+
+
+  <script src="//use.typekit.net/dbe5tbi.js"></script>
+  <script>
+    try {
+      Typekit.load();
+    } catch (e) {}
+  </script>
+  <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });
+  </script>
+
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <script type="text/javascript">
+    $(".list").click(function() {
+      $(this).find("ul").slideDown();
+      $(this).find("i").css("display", "inline");
+    });
+
+    $(".list i").click(function(event) {
+      event.stopPropagation();
+      $(this).parent().find("ul").slideUp();
+      $(this).css("display", "none");
+    });
+
+    $(".list ul li").click(function() {
+      var difficulty = $(this).find("a").data("navigate");
+      var roundCount = $(this).parent().parent().attr('id');
+      $("div[data-content]").css("display", "none");
+      $('div[data-content=' + roundCount + ']').css("display", "block");
+      var id = '#' + difficulty;
+      $('div[data-content=' + roundCount + ']').find('div[id]').css("display", "none");
+      $('div[data-content=' + roundCount + ']').find(id).css("display", "block");
+      if (roundCount == "round-one") {
+        temp = "Round One &middot;";
+      } else if (roundCount == "round-two") {
+        temp = "Round Two &middot;";
+      } else if (roundCount == "round-three") {
+        temp = "Round Three &middot;";
+      } else if (roundCount == "round-four") {
+        temp = "Round Four &middot;";
+      } else if (roundCount == "round-five") {
+        temp = "Round Five &middot;";
+      }
+      var capitalized = difficulty[0].toUpperCase() + difficulty.substring(1);
+      var newText = temp + ' ' + capitalized;
+      $('div[data-content=' + roundCount + ']').find("h1").html(newText);
+    });
+  </script>
+
+</body>
+
+</html>

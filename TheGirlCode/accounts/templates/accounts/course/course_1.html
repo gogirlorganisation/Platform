@@ -3,7 +3,7 @@
 {% block body %}
 
 {% load static %}
-
+<script type="text/javascript" src="{% static 'accounts/curriculum/js/jquery.js'%}"></script>
 
   <div class="nine columns child">
 
@@ -21,12 +21,12 @@
           <br>
           <br>
 
-          Some words will be underlined and can be clicked upon for explanation  <u><b>like this</b></u> ( Good job! You’ve opened up an explanation for ‘like this’ and you can do it <b><u>again!</u></b> ( Wow, you’re terrific at this!) 
+          Some words will be underlined and can be clicked upon for explanation   <a id="w1" href="#" onclick="return false;"><b>like this</b></a><span id="p1" class="hidden"> ( Good job! You’ve opened up an explanation for ‘like this’ and you can do it <b><u>again!</u></b> ( Wow, you’re terrific at this!) </span>
 
           <br>
           <br>
 
-          A computer program is the set of instructions that tell that the dumb hardware  (mouse,keyboard,desktop-the physical parts of a computer)  what to do. 
+          A computer program is the set of instructions that tell that the dumb hardware (mouse,keyboard,desktop-the physical parts of a computer)  what to do. 
 
           <br>
           <br>
@@ -418,14 +418,42 @@
         <form method="POST">
           <div class= "question">
             {% csrf_token %}
-             <p>1. <code>Print ("Hello World") </code></p>
+
+            <!-- QUESTION 1 -->
+             <p>1. <code>print("Hello World") </code></p>
              <br>
-             {{ form.answer_1 }}
+             {{ form.answer_1_1 }}
              <br>
              <br>
             <button type="submit"> Submit </button>
             <br>
-            {% if  user.answer_1 == "Hello World" %}
+            {% if  user.answer_1_1 == "Hello World" %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
+                <br> 
+                <p> That's correct! </p>
+              </center>
+       
+            {% else %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/> 
+                <br> 
+                <p>Make me happy by answering correctly!</p>
+              </center>
+              <br>
+              <br>
+            {% endif %}
+            <!-- QUESTION 1 END-->
+
+            <!-- QUESTION 2 -->
+            <p>2. Output of <code>( 10+6 ) * 12 % 5</code></p>
+             <br>
+             {{ form.answer_1_2 }}
+             <br>
+             <br>
+            <button type="submit"> Submit </button>
+            <br>
+            {% if  user.answer_1_2 == 2 %}
               <center> 
                 <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
                 <br> <br>
@@ -438,12 +466,82 @@
                 <br> <br>
                 <p>Make me happy by answering correctly!</p>
               </center>
+              <br>
+              <br>
             {% endif %}
+            <!-- QUESTION 2 END -->
+
+            <!-- QUESTION 3 -->
+            <p>3. Output of <code>not (4 + 4 < 5 ) and 7+2 == 9</code></p>
+             <br>
+             {{ form.answer_1_3 }}
+             <br>
+             <br>
+            <button type="submit"> Submit </button>
+            <br>
+            {% if  user.answer_1_3 == "True" %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
+                <br> 
+                <p> That's correct! </p>
+              </center>
+       
+            {% else %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/> 
+                <br> 
+                <p>Make me happy by answering correctly!</p>
+              </center>
+              <br>
+              <br>
+            {% endif %}
+            <!-- QUESTION 3 END -->
+
+            <!-- QUESTION 4 -->
+            <p>4. Output of <br>
+              <code> r=100</code> <br>
+              <code> b=r=500</code> <br>
+              <code> b=b+500</code> <br>
+              <code> print(b+r)</code> <br>
+            </p>
+             <br>
+             {{ form.answer_1_4 }}
+             <br>
+             <br>
+            <button type="submit"> Submit </button>
+            <br>
+            {% if  user.answer_1_4 == 1500 %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
+                <br> <br>
+                <p> That's correct! </p>
+              </center>
+       
+            {% else %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/> 
+                <br> <br>
+                <p>Make me happy by answering correctly!</p>
+              </center>
+              <br>
+              <br>
+            {% endif %}
+            <!-- QUESTION 4 END -->
+
           </div>
         </form>  
       </div>
       <!-- Questions end -->
     </div>
   </div>  
+
+  <script type="text/javascript">
+      $(document).ready(function () {
+      var MastStory = function () {
+        $('#w1').click(function(){ $('#p1').removeClass('hidden'); });
+      };
+      MastStory();
+      });
+  </script>
 
 {% endblock %}

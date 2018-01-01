@@ -82,7 +82,9 @@
 
                 <br> <br>
 
-                <b>Some kind of picture depicting that </b> <br> <br>
+                <!-- poc image -->
+                <img src="{% static 'accounts/curriculum/Images/poc.png' %}" width="30%" align="right" /> 
+               <!-- poc image end -->
 
                 <code> Number_of_choc > 25: </code> <br> <br>
                 &emsp;&emsp;
@@ -112,30 +114,92 @@
               <code> print("One of your guests was alone.Failure!") </code> <br> <br>
             </p>
           </div>
-          
 
           <h1> Questions &middot; Python</h1>
-          <div class="question">
 
-            <form method="POST">
-              {% csrf_token %}
-               <p>1. <code>Print ("Hello World") </code></p>
-               <br>
-               {{ form.answer_1 }}
-               <br>
-               <br>
-              <button type="submit"> Submit </button>
-            </form>
+      <div class="question">
+        <p> Answer by pasting the output in the box. </p>
+        <form method="POST">
+          <div class= "question">
+            {% csrf_token %}
+
+            <!-- QUESTION 1 -->
+             <p>1. Output for<br>
+              <code> if ( number_of_people % 2 == 0):</code><br>
+              &emsp;&emsp;
+              <code>print(“Your party was a success!”)</code><br>
+              
+              <code>else:</code><br>
+              &emsp;&emsp;
+              <code>print(“Party failed!")</code> <br><br>
+
+              <p>Your party had 44 guests.</p><br>
+             <br>
+             {{ form.answer_3_1 }}
+             <br>
+             <br>
+            <button type="submit"> Submit </button>
             <br>
-            {% if  user.answer_1 == "Hello World" %}
-            <p> Correct </p>
-            <img src = "{% static 'accounts/curriculum/Images/happy.png' %}"/>
+            {% if  user.answer_3_1 == "Your party was a success!" %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
+                <br> 
+                <p> That's correct! </p>
+              </center>
+       
             {% else %}
-            <p> Try again </p>
-            <img src = "{% static 'accounts/curriculum/Images/sad.png' %}"/>
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/> 
+                <br> 
+                <p>Make me happy by answering correctly!</p>
+              </center>
+              <br>
+              <br>
             {% endif %}
+            <!-- QUESTION 1 END-->
+
+            <!-- QUESTION 2 -->
+            <p>2. Output of <br> <br>
+            <code>if ( age == 1 or age < 1):</code><br>
+            &emsp;&emsp;
+            <code>print(“You’re a baby!”)</code><br>
+
+            <code>else:</code><br>
+            &emsp;&emsp;
+            <code>print(“You are ancient.”)</code><br><br>
+
+            age input is 3.
+
+             <br><br>
+             {{ form.answer_3_2 }}
+             <br>
+             <br>
+            <button type="submit"> Submit </button>
+            <br>
+            {% if  user.answer_3_2 == "You are ancient." %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
+                <br> <br>
+                <p> That's correct! </p>
+              </center>
+       
+            {% else %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/> 
+                <br> <br>
+                <p>Make me happy by answering correctly!</p>
+              </center>
+              <br>
+              <br>
+            {% endif %}
+            <!-- QUESTION 2 END -->
 
           </div>
+        </form>  
+      </div>
+      <!-- Questions end -->
+
+
 
 
 

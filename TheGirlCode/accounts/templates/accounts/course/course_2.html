@@ -144,13 +144,18 @@
 
           To get "Love" out of "Ada Lovelace" you need letters from the postion 4 to 8. <br> <br>
 
-          PICTURE  <br><br>
+          <!-- Hello12345 image -->
+          <center> <img src="{% static 'accounts/curriculum/Images/lada123.png' %}" width="60%" /> </center>
+          <!-- Hello image end --> <br><br>
 
           So, simply print: <br> <br>
 
           <code> print("Ada Lovelace"[4:8])</code> <br> <br>
 
           Output: <samp> Love</samp>
+
+          **Note: In programming languages, the end postion is the number after the required number.
+
 
 
         <h1> Lower and Upper </h1>
@@ -197,35 +202,157 @@
     </div>
 
 
-    <!-- Question Start -->
-    <div class="question">
+    <!-- Questions start -->
       <h1> Questions &middot; Python</h1>
-      <div class="question">
 
+      <div class="question">
+        <p> Answer by pasting the output in the box. </p>
         <form method="POST">
-          {% csrf_token %}
-           <p>1. <code>Print ("Hello World") </code></p>
-           <br>
-           {{ form.answer_1 }}
-           <br>
-           <br>
-          <button type="submit"> Submit </button>
-        </form>
-        <br>
-        {% if  user.answer_1 == "Hello World" %}
-        <p> Correct </p>
-        <center><img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/></center>
-        {% else %}
-        <p> Try again </p>
-        <center>
-          <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/>
-          <br> <br>
-          <p> Try again </p>
-        </center>
-        {% endif %}
+          <div class= "question">
+            {% csrf_token %}
+
+            <!-- QUESTION 1 -->
+             <p>1. <code>print(“Jam” + “and” + “Butter”) </code></p>
+             <br>
+             {{ form.answer_2_1 }}
+             <br>
+             <br>
+            <button type="submit"> Submit </button>
+            <br>
+            {% if  user.answer_2_1 == "JamandButter" %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
+                <br> 
+                <p> That's correct! </p>
+              </center>
+       
+            {% else %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/> 
+                <br> 
+                <p>Make me happy by answering correctly!</p>
+              </center>
+              <br>
+              <br>
+            {% endif %}
+            <!-- QUESTION 1 END-->
+
+            <!-- QUESTION 2 -->
+            <p>2. Output of
+             <br>
+             <code> job = "AcTOr" </code> <br>
+             <code> print(job.lower())</code><br>
+             <br>
+             {{ form.answer_2_2 }}
+             <br>
+             <br>
+            <button type="submit"> Submit </button>
+            <br>
+            {% if  user.answer_2_2 == "actor" %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
+                <br> <br>
+                <p> That's correct! </p>
+              </center>
+       
+            {% else %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/> 
+                <br> <br>
+                <p>Make me happy by answering correctly!</p>
+              </center>
+              <br>
+              <br>
+            {% endif %}
+            <!-- QUESTION 2 END -->
+
+            <!-- QUESTION 3 -->
+            <p>3. Output of<br>
+              <code> choc = “That’s Bond, James Bond."</code>
+              <code> print len(choc)</code></p><br><br>
+             {{ form.answer_2_3}}
+             <br>
+             <br>
+            <button type="submit"> Submit </button>
+            <br>
+            {% if  user.answer_2_3 == 24 %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
+                <br> 
+                <p> That's correct! </p>
+              </center>
+       
+            {% else %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/> 
+                <br> 
+                <p>Make me happy by answering correctly!</p>
+              </center>
+              <br>
+              <br>
+            {% endif %}
+            <!-- QUESTION 3 END -->
+
+            <!-- QUESTION 4 -->
+            <p>4. Syntax to access y out of lang <br>
+              <code> lang="Python" </code>
+            </p>
+             <br>
+             {{ form.answer_2_4 }}
+             <br>
+             <br>
+            <button type="submit"> Submit </button>
+            <br>
+            {% if  user.answer_2_4 == "lang[1]" %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
+                <br> <br>
+                <p> That's correct! </p>
+              </center>
+       
+            {% else %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/> 
+                <br> <br>
+                <p>Make me happy by answering correctly!</p>
+              </center>
+              <br>
+              <br>
+            {% endif %}
+            <!-- QUESTION 4 END -->
+
+            <!-- QUESTION 5 -->
+            <p>5. Output of <br>
+              <code> comp_scientist="Grace Hopper"</code> <br>
+              <code> print(comp_scientist[5:9])</code> <br>
+            </p>
+             <br>
+             {{ form.answer_2_5 }}
+             <br>
+             <br>
+            <button type="submit"> Submit </button>
+            <br>
+            {% if  user.answer_2_5 == "Hop" %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
+                <br> <br>
+                <p> That's correct! </p>
+              </center>
+       
+            {% else %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/> 
+                <br> <br>
+                <p>Make me happy by answering correctly!</p>
+              </center>
+              <br>
+              <br>
+            {% endif %}
+            <!-- QUESTION 5 END -->
+
+          </div>
+        </form>  
       </div>
-    </div>
-    <!-- Question end --> 
-  </div>
+      <!-- Questions end -->
 
 {% endblock %}

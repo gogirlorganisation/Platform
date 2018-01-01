@@ -47,11 +47,14 @@ urlpatterns = [
     # Curriculum 7
     url(r'^course-7/$', views.course_7, name='course7'),
 
-    # Curriculum 8
-    url(r'^course-8/$', views.course_8, name='course8'),
+    # Project 1
+    url(r'^project-1/calculator$', views.calc, name='calc'),
 
-    # Curriculum 9
-    url(r'^course-9/$', views.course_9, name='course9'),
+    # Project 2
+    url(r'^project-2/rps$', views.rps, name='rps'),
+
+    # Project 3
+    url(r'^project-3/pyglatin', views.pyglatin, name='pyglatin'),
 
 
 

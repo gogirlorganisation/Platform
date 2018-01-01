@@ -1,6 +1,6 @@
 {% extends 'accounts/course/course_base.html' %}
 
-{% block title %} 7 {% endblock %}
+{% block title %} 6 {% endblock %}
 
 {% block body %}
 
@@ -26,16 +26,16 @@
       Python offers a tool called lists to keep track of related "things," or values which are similar.<br>
       To help Eve, let's make a list called shopping_list  and fill it with each of the items:<br><br>
 
-      <!-- Hello01234 image -->
-      <center> <img src="{% static 'accounts/curriculum/Images/list.png' %}" width="70%" /> </center>
-      <!-- Hello image end -->
+      <!-- list image -->
+      <center> <img src="{% static 'accounts/curriculum/Images/list1.png' %}" width="70%" /> </center>
+      <!-- list image end -->
        
       <p>
       <br> <br> 
       Programmers like to count from 0. Hence, instead of having 1, 2, 3 and, 4 position numbers, we have 0, 1, 2 and, 3 position numbers! <br> <br>
        
 
-      <code>shopping_list = [“carrots", "chocolate", "butter", "bread"]</code> <br> <br>
+      <code>shopping_list=[“carrots", "chocolate", "butter", "bread"]</code> <br> <br>
        
       If we want to print the third item in the shopping_list (butter) we can do so by entering its position in the list <i>(called the index position)</i> inside square brackets ([]), like we did for strings: <br> <br>
 
@@ -63,7 +63,13 @@
       <code>list_name.append(item)</code> <br> <br>
 
       <code>shopping_list.append(“flour”)</code> <br> <br>
-                 
+
+      <!-- list image -->
+      <center> <img src="{% static 'accounts/curriculum/Images/list2.png' %}" width="70%" /> </center>
+      <!-- list image end -->
+      
+      <p>
+      <br> <br>        
       Now using append(), the item can only be added to the end of the list. But do not fret, we can add the item to whichever position you like using another function <b>insert()</b>. Eve wants to buys toffees! Let's put toffees after carrots. So we to insert it at index number 1. <br> <br>
 
       Syntax: <br> 
@@ -72,6 +78,12 @@
 
       Within the brackets first mention the desired  <i>index number</i>  and then the item. <br> <br>
 
+      <!-- list image -->
+      <center> <img src="{% static 'accounts/curriculum/Images/list3.png' %}" width="70%" /> </center>
+      <!-- list image end -->
+
+      <p>
+      <br> <br>
       Sometimes you need to remove something from the list, that can achieved by yet another function <b>remove()</b>. <br>
       Silly Eve forgot she already had a loaf of bread at home, so she needs our help to remove that item from the list.<br> <br>
 
@@ -79,6 +91,14 @@
       <code>list_name.remove(item)</code> <br><br>
 
       <code>shopping_list.remove(“bread”)</code><br><br>
+
+      <!-- list image -->
+      <center> <img src="{% static 'accounts/curriculum/Images/list4.png' %}" width="70%" /> </center>
+      <!-- list image end -->
+
+      <p>
+
+      <br><br>
 
       Eve has realised that she doesn't need carrots for baking a cake! She wants to buy eggs now... Easy! Just replace the carrots!! Carrots are on the first position, so their index number is 0.<br><br>
 
@@ -89,34 +109,120 @@
 
       <br><br>
 
+      <!-- list image -->
+      <center> <img src="{% static 'accounts/curriculum/Images/list5.png' %}" width="70%" /> </center>
+      <!-- list image end -->
+      <p>
+      <br><br>
+
       Good work! Now Eve can go shopping!!
          
       </p>
 
       </div>
 
-    <h1> Questions &middot; Python</h1>
-    <div class="question">
+    <!-- Questions start -->
+  <h1> Questions &middot; Python</h1>
 
-      <form method="POST">
-        {% csrf_token %}
-         <p>1. <code>Print ("Hello World") </code></p>
-         <br>
-         {{ form.answer_1 }}
-         <br>
-         <br>
-        <button type="submit"> Submit </button>
-      </form>
-      <br>
-      {% if  user.answer_1 == "Hello World" %}
-      <p> Correct </p>
-      <img src = "{% static 'accounts/curriculum/Images/happy.png' %}"/>
-      {% else %}
-      <p> Try again </p>
-      <img src = "{% static 'accounts/curriculum/Images/sad.png' %}"/>
-      {% endif %}
+      <div class="question">
+        <p> Answer by pasting the output in the box. </p>
+        <form method="POST">
+          <div class= "question">
+            {% csrf_token %}
 
-    </div>
+            <!-- QUESTION 1 -->
+             <p>1. Output for<br>
+              <code> print(shopping_list[3])</code><br>
+             <br>
+             {{ form.answer_6_1 }}
+             <br>
+             <br>
+            <button type="submit"> Submit </button>
+            <br>
+            {% if  user.answer_6_1 == "butter" %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
+                <br> 
+                <p> That's correct! </p>
+              </center>
+       
+            {% else %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/> 
+                <br> 
+                <p>Make me happy by answering correctly!</p>
+              </center>
+              <br>
+              <br>
+            {% endif %}
+            <!-- QUESTION 1 END-->
+
+            <!-- QUESTION 2 -->
+            <p>2. Output of <br> <br>
+            <code>for i in range(1,3):</code><br>
+            &emsp;&emsp;
+            <code>print(shopping_list[i])</code><br><br>
+
+            Write a space-separated output.
+
+             <br><br>
+             {{ form.answer_6_2 }}
+             <br>
+             <br>
+            <button type="submit"> Submit </button>
+            <br>
+            {% if  user.answer_6_2 == "toffees chocolate" %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
+                <br> <br>
+                <p> That's correct! </p>
+              </center>
+       
+            {% else %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/> 
+                <br> <br>
+                <p>Make me happy by answering correctly!</p>
+              </center>
+              <br>
+              <br>
+            {% endif %}
+            <!-- QUESTION 2 END -->
+
+            <!-- QUESTION 3 -->
+            <p><br>3. Syntax to insert juice at postion 2.<br>
+              Write without any spaces.
+    
+             <br><br>
+             {{ form.answer_6_3 }}
+             <br>
+             <br>
+            <button type="submit"> Submit </button>
+            <br>
+            {% if  user.answer_6_3 == "shopping_list.insert(2,\"juice\")" %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
+                <br> <br>
+                <p> That's correct! </p>
+              </center>
+       
+            {% else %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/> 
+                <br> <br>
+                <p>Make me happy by answering correctly!</p>
+              </center>
+              <br>
+              <br>
+            {% endif %}
+            <!-- QUESTION 3 END -->
+
+            
+
+          </div>
+        </form>  
+      </div>
+      <!-- Questions end -->
 
 
 

@@ -21,6 +21,10 @@ body {
   background: #69e;
   color: #fff; }
 
+.rounds-list a:hover {
+  text-decoration: none; !important;
+}
+
 .container {
   width: 100% !important;
   max-width: 100% !important; }

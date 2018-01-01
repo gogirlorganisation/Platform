@@ -133,10 +133,10 @@
         <option value="$PROJECT_DIR$/accounts/templates/accounts/changepassword.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/editprofile.html" />
         <option value="$PROJECT_DIR$/accounts/urls.py" />
-        <option value="$PROJECT_DIR$/accounts/models.py" />
         <option value="$PROJECT_DIR$/accounts/forms.py" />
         <option value="$PROJECT_DIR$/accounts/views.py" />
         <option value="$PROJECT_DIR$/accounts/static/accounts/profile/profile.css" />
+        <option value="$PROJECT_DIR$/accounts/models.py" />
       </list>
     </option>
   </component>

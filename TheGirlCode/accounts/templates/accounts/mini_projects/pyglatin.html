@@ -1,6 +1,6 @@
 {% extends 'accounts/mini_projects/base.html' %}
 
-{% block title %} Calculator {% endblock %}
+{% block title %} Pyglatin {% endblock %}
 
 {% block body %}
 
@@ -15,13 +15,50 @@
 
           <div class="question">
 
-            <h1> Pyglatin &middot; Python</h1>
+            <h1> Mini Projects &middot; Python</h1>
 
-            <p>
+            <p> 
 
 
+             Let&#39;s create our own translator for our own language today! This may seem a little daunting but..don&#39;t fret! We can do this.
+              <br>
+              <br>
+            
+			Pyg Latin(<i>you can call your own lanuage anything you want and just have a consistent algorithm for it</i>) is a language where we take the first letter of a word and put it on the end while also adding a vowel sound "ay". So dog becomes “ogday”.<br>
 
-            </div>
+			So you can now create your <b> own </b> language! Isn&#39;t that exciting?<br> <br>
+
+			<br><br>
+			           
+			<code> pyg = &#39;ay&#39; <br> <br>
+			 
+			# Take the input of the wrod <br> 
+			original = raw_input(&#39;Enter a word:&#39;) <br><br>
+
+			#Convert the word to lower<br>
+			word = original.lower() <br><br>
+
+			#Assign the first letter to the variable first <br>
+			first = word[0]<br><br>
+
+			#check if the word enetered is valid <br>
+			if (len(original) &gt; 0 and original.isalpha()): <br>
+			&emsp;&emsp;
+			        new_word = word[1:] + word[0] + pyg <br>
+			&emsp;&emsp;
+			        print new_word<br><br>
+
+			else:<br>
+			&emsp;&emsp;&emsp;&emsp;
+			    print &#39;You have not entered a valid word.&#39;<br>
+			  </code>
+
+<br>
+<br>
+</p>
+</div>
+</div>
+
 
 
 

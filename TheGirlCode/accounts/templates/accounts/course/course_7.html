@@ -1,18 +1,16 @@
 {% extends 'accounts/course/course_base.html' %}
 
-{% block title %} 6 {% endblock %}
+{% block title %} 7 {% endblock %}
 
 {% block body %}
 
 {% load static %}
+<script type="text/javascript" src="{% static 'Bootstrap/assets/js/vendor/jquery-slim.min.js'%}"></script>
 
 
       <div class="nine columns child">
 
         <div data-content="landing">
-          <br>
-          <br>
-
           
           <div class="question">
 
@@ -20,65 +18,181 @@
 
             <p>
               
+            In Python, function is a group of related statements that perform a specific task.<br>
+            Functions help break our program into smaller and modular chunks.<a id="w1" href="#" onclick="return false;"><b>(How does that help?)</b></a> </b></a><span id="p1" class="hidden"> As our program grows larger and larger, functions make it more organized and manageable.            Furthermore, it avoids repetition and makes code reusable.</span> <br><br>
+
+            Function blocks begin with the keyword def followed by the function name and parentheses ( ( ) ). <br> <br>
+
+            Syntax: <br>
+
+            <code> def function_name() </code> <br> <br>
+             
+
+            You have used the function <code>len()</code> earlier, which is a <a id="w2" href="#" onclick="return false;"><b>built-in function</b></a><span id="p2" class="hidden"> (These functions are pre-defined in the language and thus we don;t need to tell the compiler hwat len() does, we just need to use it)</span> that returns the length of the string entered. <br> <br>
+            Some more built in functions you’ve learnt are, <code>print()</code>, <code> .upper() </code> and all the functions you used to move your turtle! <br><br>
+
+            But what if you want to create a function for something that doesn’t have a predefined meaning? There exist <b>user-defined functions</b> which you (i.e the user) can create. <br> <br>
+
+            The first step is to define your function, give it a name and parameter: let’s talk about Mathematics, in Trigonometry you have  functions (sin x, cos x, tan x), now, they do not make sense <b>at all</b> if a value for <b>x</b> isn’t given. Here x is our <b>parameter</b> and that’s exactly what we need in coding too! <br> <br>
+
+            So let’s define a function <i>add</i> that adds two numbers given as parameters <br> <br>
+
+            <code> def add(m, n): </code><br>
+            &emsp;&emsp;
+            <code>return m + n</code><br><br>
+            <code>print add(123, 77) </code><br><br> #calling the function
+
+            Once you <a id="w3" href="#" onclick="return false;"><b>call the function</b></a> <span id="p3" class="hidden">(use the function in your program)</span>, the parameters provided within the brackets are used to carry it out(in this example, we carry out an addition function). The variable m will have the value of 123,  n of 77 and the function yields their sum. <br> <br>
 
 
-Ever opened your book and seen tens of pages of the syllabus you have to read for a test? Don’t you wish there could be something more concise? <br> <br>
-That’s exactly what we want in a program – it should be as short and efficient as possible!  <br>
-You have used the function len() earlier, which is a <i>built-in function</i> that returns the length of the string entered (P.S - It can also calculate the length of a list, but we’ll come to that later)  and therefore we don’t need to <b>define</b> it.<br> <br> 
-Some more built in functions you’ve learnt are, <br>
-Print() and all the functions you used to move your turtle! <br> <br>
 
-But what if you want to create a function for something that doesn’t have a predefined one? There exist <b>user-defined functions</b> which you (i.e the user) have to create. The first step is to define your function, give it a name and parameter: let’s talk about Mathematics, in Trigonometry you have  functions (sin x, cos x, tan x), now they do not make sense <b>at all</b> if a value for <b>x</b> isn’t given. Here, x is our <b>parameter</b> and that’s exactly what we need in coding too! <br> <br>
-So let’s define a function <i>add</i> that adds two numbers given as parameters <br> <br>
-<code> def add(m, n):
-       return m + n
-print add(123, 77) </code> <br> <br>
+            **Note : That colon present after the bracket is important, do not forget to add it after defining a function, else there will be an error.
+            <br> <br>
 
-Once you call the function (use the function in your program), the parameters provided within the brackets are used to carry it out(in this example, we carry out an addition function). The variable m will have the value of 123,  n of 77 and the function yields their sum. <Br> 
+            We can create a function using strings too. <br><br>
+
+            <code> def statement(name) </code><br>
+            &emsp;&emsp;
+            <code>print (name + “, you’re doing amazing sweetie”)</code> <br> <br>
+
+            Can you create a few functions on your own? <br> <br>
+
+            <h1>Calling a function</h1>
+
+            <p>
+            After defining a function, in order to use it you need to <b> call </b> it. This means that you refer to the function you created in your code in order to use it. To call a function in Python, use the function name, brackets (opening and closing) and parameter(s). <br> <br>
+            Example: <br> <br>
+            <code>def avgnum(x, y):</code><br>
+            &emsp;&emsp;
+            <code>print("Average of ",x," and ",y, " is ",(x+y)/2)</code> <br> <br>
+            <code>avgnum(3, 4) #calling a function.</code>
 
 
+            <h1> Return </h1>
 
-Note : That colon present after the bracket is important, do not forget to add it after defining a function, else there will be an error. <br> <br>
+            <p>
 
-We can create a function using strings too. <br> <Br>
-<code> def statement(name) 
-       print (name + “, you’re doing amazing sweetie”) </code> <br> <br>
-Can you create a few functions on your own?
-<br><br>
+            The return statement in a function is used to exit it and go back to the place from where it was called.<br><br>
 
-You might be wondering what <i>exactly </i> functions <b>do</b>.Functions mainly help us shorten our program, letting us avoid writing the same statements over and over again. Can you imagine typing the same greeting for over 100 people Now that sounds horrid! So instead of doing that, we could use functions and further reduce the load by using loops (How? That’s for you to figure out!).
-<br>
-<br>
+            <code>return [expression_list]</code>
+
+            <br><br>
+            This statement can contain expression which gets evaluated and the value is returned. If there is no expression in the statement or the return statement itself is not present inside a function, then the function will return the None object.<br> <br>
+
+            For example:<br> <br>
+            <code> def absolute_value(num):</code> <br>
+            <code>#This function returns the absolute</code><br>
+            <code>#value of the entered number</code><br><br>
+
+            <code>if num >= 0:</code><br>
+              <code>return num</code><br>
+            <code>else:</code><br>
+              <code>return -num</code><br><br>
+
+            Here, if number is greater than or equal to 0, the number as it is returned , otherwise the number is returned with a negative sign in front of it.
+
                
               </p>
 
-            </div>
+            </div>  
 
-          <h1> Questions &middot; Python</h1>
-          <div class="question">
+      <!-- Questions start -->
+      <h1> Questions &middot; Python</h1>
 
-            <form method="POST">
-              {% csrf_token %}
-               <p>1. <code>Print ("Hello World") </code></p>
-               <br>
-               {{ form.answer_1 }}
-               <br>
-               <br>
-              <button type="submit"> Submit </button>
-            </form>
+      <div class="question">
+        <p> Answer by pasting the output in the box. </p>
+        <form method="POST">
+          <div class= "question">
+            {% csrf_token %}
+
+            <!-- QUESTION 1 -->
+             <p>1.  Output of <br>
+             <code>def even(a):</code> <br>
+             &emsp;&emsp;
+             <code>if a%2==0:</code> <br>
+             &emsp;&emsp;&emsp;&emsp;
+             <code>return 1</code> <br>
+             &emsp;&emsp;
+             <code>else:</code> <br>
+             &emsp;&emsp;&emsp;&emsp;
+             <code>return 0</code> <br><br>
+
+             <code>for x in range(0,5):</code> <br>
+             &emsp;&emsp;
+             <code>if even(x):</code> <br>
+             &emsp;&emsp;&emsp;&emsp;
+             <code>print("even")</code> <br> <br>
+
+             Give a space-separated answer. <br>
+
+             <br>
+             {{ form.answer_7_1 }}
+             <br>
+             <br>
+            <button type="submit"> Submit </button>
             <br>
-            {% if  user.answer_1 == "Hello World" %}
-            <p> Correct </p>
-            <img src = "{% static 'accounts/curriculum/Images/happy.png' %}"/>
+            {% if  user.answer_7_1 == "even even even" %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
+                <br> 
+                <p> That's correct! </p>
+              </center>
+       
             {% else %}
-            <p> Try again </p>
-            <img src = "{% static 'accounts/curriculum/Images/sad.png' %}"/>
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/> 
+                <br> 
+                <p>Make me happy by answering correctly!</p>
+              </center>
+              <br>
+              <br>
             {% endif %}
+            <!-- QUESTION 1 END-->
 
-          </div>
+            <!-- QUESTION 2 -->
+            <p>2. Output of <br>
+              <code>def operation(a,b):</code><br>
+              &emsp;&emsp;
+              <code> return a*b </code><br><br>
 
+              <code>print(operation(4,5))</code>
+             <br>
+             {{ form.answer_7_2 }}
+             <br>
+             <br>
+            <button type="submit"> Submit </button>
+            <br>
+            {% if  user.answer_7_2 == 1024 %}
+            <br>
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
+                <br> <br>
+                <p> That's correct! </p>
+              </center>
+       
+            {% else %}
+              <center> 
+                <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/> 
+                <br> <br>
+                <p>Make me happy by answering correctly!</p>
+              </center>
+              <br>
+              <br>
+            {% endif %}
+            <!-- QUESTION 2 END -->
 
-
-      </div>
+  <script type="text/javascript">
+      $(document).ready(function () {
+      var MastStory = function () {
+        $('#w1').click(function(){ $('#p1').removeClass('hidden'); });
+        $('#w2').click(function(){ $('#p2').removeClass('hidden'); });
+        $('#w3').click(function(){ $('#p3').removeClass('hidden'); });
+        $('#w4').click(function(){ $('#p4').removeClass('hidden'); });
+        $('#w5').click(function(){ $('#p5').removeClass('hidden'); });
+        $('#clr').click(function(){ $('#p1').addClass('hidden'); });
+      };
+      MastStory();
+      });
+  </script>
 
 {% endblock %}

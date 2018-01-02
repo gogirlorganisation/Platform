@@ -15,16 +15,84 @@
 
           <div class="question">
 
-            <h1> Rock, paper and scissors &middot; Python</h1>
+            <h1> Mini Projects &middot; Python</h1>
 
             <p>
 
+            
+			Ever played a game of rock paper scissor? Well,you can make a program to play with the computer now!<br><br>
+			For this you’ll need to know:<br> 
+			Loops<br>
+			Conditional Flow<br>
+			Lists <br> <br>
 
+			           
+			<code>play_options = [&quot;Rock&quot;, &quot;Paper&quot;, &quot;Scissors&quot;]</code> <br> <br>
+			 
+			Randint() is an <b>inbuilt </b> function that assigns a random value to the variable.  <br> <br> 
 
-            </div>
+			Syntax:<br>
+			<code> randint(starting_value,end_value)</code><br><br>
 
+			Game: <br>
 
+			<code> computer = play_options[randint(0,2)]  </code><br>
+			<code>#assign a random play to the computer</code> <br><br>
 
+			<code>player = input("Enter your play")</code><br> <br>
+			 
+			    <code>if player == &quot;Scissors&quot;:<br></code>
+			    &emsp;&emsp;
+			        <code>if computer == &quot;Rock&quot;:</code><br>
+			        	 &emsp;&emsp; &emsp;&emsp;
+			            <code>print(&quot;You lose...)</code><br>
+			            	 &emsp;&emsp;
+			        <code>else:</code><br> 
+			        	 &emsp;&emsp; &emsp;&emsp;
+			            <code>print(&quot;You win!&quot;, player, &quot;cut&quot;, computer)</code><br>
+			    <code>else:</code><br>
+			        <code>print(&quot;That&#39;s not a valid play. Check your spelling!&quot;)</code>
+			    <code>#player was set to True, but we want it to be False so the loop continues</code><br> <br>
+			    <code>player = False</code><br>
+			    <code>computer = t[randint(0,2)] </code>
+			    <br>
+			    <br>
 
+			  After taking an input from the user, you&#39;ve to make all possible cases for the possible outcomes. These cases are:<br>
+			  1. The computer and player&#39;s move is the same- this will produce a <b> tie</b> <br>
+			  2. The player is scissor and the computer is paper- the player wins. <br>
+			  3. The player is rock and the computer is scissor- the player wins. <br>
+			  4. The player is paper and the computer is scissor- the player loses. <br>
+			  5. The player is rock and the computer is paper- the player loses. <br> <br>  
+
+			  <code>if player == computer:</code><br>
+			  &emsp;&emsp;
+			        <code>print(&quot;Tie!&quot;)</code><br><br>
+
+			    <code>elif player == &quot;Rock&quot;:</code><br>
+			    &emsp;&emsp;
+			        <code>if computer == &quot;Paper&quot;:</code><br>
+			        &emsp;&emsp;&emsp;&emsp;
+			            <code>print(&quot;You lose!&quot;)</code><br><br>
+			        &emsp;&emsp;
+			        <code>else:</code><br>
+			        	&emsp;&emsp;&emsp;&emsp;
+			            <code>print(&quot;You win!&quot;)</code><br>
+
+			    <code>elif player == &quot;Paper&quot;:</code><br>
+			    	&emsp;&emsp;
+			        <code>if computer == &quot;Scissors&quot;:</code><br>
+			        &emsp;&emsp;&emsp;&emsp;
+			            <code>print(&quot;You lose!&quot;, computer, &quot;cut&quot;, player)</code><br>
+			            &emsp;&emsp;
+			        <code>else:</code><br>
+			        	&emsp;&emsp;&emsp;&emsp;
+			            <code>print(&quot;You win!&quot;)</code><br>
+
+			    Wonderful! You are done!
+			</p>
+		</div>
+	</div>
+</div>
 
 {% endblock %}

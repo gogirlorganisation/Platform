@@ -78,7 +78,15 @@ class CourseForm4(forms.ModelForm):
 
     class Meta:
         model = UserProfile
-        fields = ('answer_4_1','answer_4_2','answer_4_3', )
+        fields = ('answer_4_1', 'answer_4_2', 'answer_4_3', )
+
+
+class CourseForm5(forms.ModelForm):
+    answer_5_1 = forms.CharField()
+
+    class Meta:
+        model = UserProfile
+        fields = ('answer_5_1', )
 
 
 class CourseForm6(forms.ModelForm):
@@ -89,5 +97,14 @@ class CourseForm6(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ('answer_6_1','answer_6_2','answer_6_3',  )
+
+
+class CourseForm7(forms.ModelForm):
+    answer_7_1 = forms.CharField()
+    answer_7_2 = forms.IntegerField()
+
+    class Meta:
+        model = UserProfile
+        fields = ('answer_7_1','answer_7_2',)
 
 

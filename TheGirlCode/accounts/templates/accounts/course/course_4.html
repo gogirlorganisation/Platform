@@ -75,8 +75,14 @@
 
     Good work! <br> <br>
 
+   
      No one likes to be disturbed while sleeping. <br> Eve is really tired today and she wants to take a nap. She’s told her mum not to disturb her  <b> while </b> she’s sleeping. <br> 
      Once she wakes up, her mother can give her chores as she is no longer sleeping. Her request condition expires or, is terminated, once she wakes up and is no longer sleeping.<br>
+
+    <!-- eveparty image -->
+    <img src="{% static 'accounts/curriculum/Images/seve.png' %}" width="20%" align="right"/>
+    <!-- eveparty end -->
+
      This is the basic principle of a <b> While Loop </b>.    
       <br>
       <br>
@@ -85,7 +91,7 @@
       &emsp;&emsp;
       <code> mother_can't_give_work</code><br><br>
 
-    The while loop tells the computer to do something as long as <b>the condition</b> is True. <br>
+    The while loop tells the computer to do something as long as <br><b>the condition</b> is True.<br>
     The condition is evaluated, and if the condition is <b>True</b>, the code within the block is executed.  <br>
 
     This repeats until the condition becomes false. <br> <br>
@@ -236,6 +242,59 @@
         </form>  
       </div>
       <!-- Questions end -->
+
+      <h1> Sample Programs &middot; Python</h1>
+
+      <div class="question">
+        <p>
+          1. Write a Program to add first n natural numbers (1+2+3+...+n). <br> <br>
+
+          <code>n = 10</code><br>
+          <code>sum = 0</code><br>
+          <code>i = 1</code><br><br>
+          <code>while i <= n:</code><br>
+          &emsp;&emsp;
+          <code>sum = sum + i</code><br>
+          &emsp;&emsp;
+          <code>i = i+1 </code><br><br>
+          <code>print("The sum is", sum)</code><br><br>
+
+          2. A Fibonacci sequence is the integer sequence of 0, 1, 1, 2, 3, 5, 8....<br>
+          The first two terms are 0 and 1. All other terms are obtained by adding the preceding two terms. This means to say the nth term is the sum of (n-1)th and (n-2)th term.<br><br>
+          Write a Program to display the Fibonacci sequence up to n-th term where n is provided by the user. <br> <br>
+
+          <code>nterms = 10</code><br>
+          <code>n1 = 0</code><br>
+          <code>n2 = 1</code><br>
+          <code>count = 0</code><br><br>
+
+          <code>if nterms <= 0:</code><br>
+            &emsp;&emsp;
+             <code>print("Please enter a positive integer")</code><br>
+          <code>if nterms == 1:</code><br>
+             &emsp;&emsp;
+             <code>print("Fibonacci sequence upto",nterms,":")</code><br>
+              &emsp;&emsp;
+             <code>print(n1)</code><br>
+          <code>else:</code><br>
+            &emsp;&emsp;
+             <code>print("Fibonacci sequence upto",nterms,":")</code><br><br>
+              &emsp;&emsp;
+             <code>while count < nterms:</code><br>
+              &emsp;&emsp;&emsp;&emsp;
+                 <code>print(n1,end=' , ')</code><br>
+                  &emsp;&emsp;&emsp;&emsp;
+                 <code>nth = n1 + n2</code><br>
+                  &emsp;&emsp;&emsp;&emsp;
+                 <code>n1 = n2</code><br>
+                  &emsp;&emsp;&emsp;&emsp;
+                 <code>n2 = nth</code><br>
+                  &emsp;&emsp;&emsp;&emsp;
+                 <code>count += 1</code><br>
+
+
+
+      </div>
 
 
 {% endblock %}

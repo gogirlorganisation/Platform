@@ -91,25 +91,25 @@ def course_1(request):
             ans4 = form.cleaned_data['answer_1_4']
 
             if ans1 == "Hello World" and profile.answer_1_1_check == False:
-                profile.progress += 10
+                profile.progress += 5
                 profile.answer_1_1_check = True
                 profile.save()
             form.save()
 
             if ans2 == 2 and profile.answer_1_2_check == False:
-                profile.progress += 10
+                profile.progress += 5
                 profile.answer_1_2_check = True
                 profile.save()
             form.save()
 
             if ans3 == "True" and profile.answer_1_3_check == False:
-                profile.progress += 10
+                profile.progress += 5
                 profile.answer_1_3_check = True
                 profile.save()
             form.save()
 
             if ans4 == 1500 and profile.answer_1_4_check == False:
-                profile.progress += 10
+                profile.progress += 5
                 profile.answer_1_4_check = True
                 profile.save()
             form.save()
@@ -141,31 +141,31 @@ def course_2(request):
             ans9 = form.cleaned_data['answer_2_5']
 
             if ans5 == "JamandButter" and profile.answer_2_1_check == False:
-                profile.progress += 10
+                profile.progress += 5
                 profile.answer_2_1_check = True
                 profile.save()
             form.save()
 
             if ans6 == "actor" and profile.answer_2_2_check == False:
-                profile.progress += 10
+                profile.progress += 5
                 profile.answer_2_2_check = True
                 profile.save()
             form.save()
 
             if ans7 == 24 and profile.answer_2_3_check == False:
-                profile.progress += 10
+                profile.progress += 5
                 profile.answer_2_3_check = True
                 profile.save()
             form.save()
 
             if ans8 == "lang[1]" and profile.answer_2_4_check == False:
-                profile.progress += 10
+                profile.progress += 5
                 profile.answer_2_4_check = True
                 profile.save()
             form.save()
 
             if ans9 == "Hop" and profile.answer_2_5_check == False:
-                profile.progress += 10
+                profile.progress += 5
                 profile.answer_2_5_check = True
                 profile.save()
             form.save()
@@ -194,13 +194,13 @@ def course_3(request):
             ans11 = form.cleaned_data['answer_3_2']
 
             if ans10 == "Your party was a success!" and profile.answer_3_1_check == False:
-                profile.progress += 10
+                profile.progress += 5
                 profile.answer_3_1_check = True
                 profile.save()
             form.save()
 
             if ans11 == "You are ancient." and profile.answer_3_2_check == False:
-                profile.progress += 10
+                profile.progress += 5
                 profile.answer_3_2_check = True
                 profile.save()
             form.save()
@@ -230,19 +230,19 @@ def course_4(request):
             ans14 = form.cleaned_data['answer_4_3']
 
             if ans12 == 10 and profile.answer_4_1_check == False:
-                profile.progress += 10
+                profile.progress += 5
                 profile.answer_4_1_check = True
                 profile.save()
             form.save()
 
             if ans13 == "1 2 3" and profile.answer_4_2_check == False:
-                profile.progress += 10
+                profile.progress += 5
                 profile.answer_4_2_check = True
                 profile.save()
             form.save()
 
             if ans14 == "odd even odd even" and profile.answer_4_3_check == False:
-                profile.progress += 10
+                profile.progress += 5
                 profile.answer_4_3_check = True
                 profile.save()
             form.save()
@@ -259,7 +259,32 @@ def course_4(request):
 
 
 def course_5(request):
-    return render(request, 'accounts/course/course_5.html')
+    try:
+        profile = request.user.userprofile
+    except UserProfile.DoesNotExist:
+        profile = UserProfile(user=request.user)
+
+    if request.method == 'POST':
+        form = CourseForm5(request.POST, instance=profile)
+        if form.is_valid():
+            ans15 = form.cleaned_data['answer_5_1']
+
+            if ans15 == "eve.left(90)" and profile.answer_5_1_check == False:
+                profile.progress += 5
+                profile.answer_5_1_check = True
+                profile.save()
+            form.save()
+
+
+        args = {'user': profile, 'form': form, }
+
+        return render(request, 'accounts/course/course_5.html', args)
+
+    else:
+        form = CourseForm5(instance=profile)
+
+        args = {'user': profile, 'form': form}
+        return render(request, 'accounts/course/course_5.html', args)
 
 
 def course_6(request):
@@ -271,24 +296,24 @@ def course_6(request):
     if request.method == 'POST':
         form = CourseForm6(request.POST, instance=profile)
         if form.is_valid():
-            ans15 = form.cleaned_data['answer_6_1']
-            ans16 = form.cleaned_data['answer_6_2']
-            ans17 = form.cleaned_data['answer_6_3']
+            ans16 = form.cleaned_data['answer_6_1']
+            ans17 = form.cleaned_data['answer_6_2']
+            ans18 = form.cleaned_data['answer_6_3']
 
-            if ans15 == "butter" and profile.answer_6_1_check == False:
-                profile.progress += 10
+            if ans16 == "butter" and profile.answer_6_1_check == False:
+                profile.progress += 5
                 profile.answer_6_1_check = True
                 profile.save()
             form.save()
 
-            if ans16 == "toffees chocolate" and profile.answer_6_2_check == False:
-                profile.progress += 10
+            if ans17 == "toffees chocolate" and profile.answer_6_2_check == False:
+                profile.progress += 5
                 profile.answer_6_2_check = True
                 profile.save()
             form.save()
 
-            if ans17 == "shopping_list.insert(2,\"juice\")" and profile.answer_6_3_check == False:
-                profile.progress += 10
+            if ans18 == "shopping_list.insert(2,\"juice\")" and profile.answer_6_3_check == False:
+                profile.progress += 5
                 profile.answer_6_3_check = True
                 profile.save()
             form.save()
@@ -305,7 +330,38 @@ def course_6(request):
 
 
 def course_7(request):
-    return render(request, 'accounts/course/course_7.html')
+    try:
+        profile = request.user.userprofile
+    except UserProfile.DoesNotExist:
+        profile = UserProfile(user=request.user)
+
+    if request.method == 'POST':
+        form = CourseForm7(request.POST, instance=profile)
+        if form.is_valid():
+            ans19 = form.cleaned_data['answer_7_1']
+            ans20 = form.cleaned_data['answer_7_2']
+
+            if ans19 == "even even even" and profile.answer_7_1_check == False:
+                profile.progress += 5
+                profile.answer_7_1_check = True
+                profile.save()
+            form.save()
+
+            if ans20 == 1024 and profile.answer_7_2_check == False:
+                profile.progress += 5
+                profile.answer_7_2_check = True
+                profile.save()
+            form.save()
+
+        args = {'user': profile, 'form': form, }
+
+        return render(request, 'accounts/course/course_7.html', args)
+
+    else:
+        form = CourseForm7(instance=profile)
+
+        args = {'user': profile, 'form': form}
+        return render(request, 'accounts/course/course_7.html', args)
 
 
 def calc(request):

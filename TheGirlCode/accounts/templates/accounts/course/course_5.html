@@ -92,6 +92,57 @@
         <code>eve.left(90)</code> <br> <br>
 
         Great!! Now you are ready to create anything that you want! Go on and explore!
+      </div>
+
+        <h1> Questions &middot; Python</h1>
+
+
+        <div class="question">
+          <p> Answer by pasting the output in the box. </p>
+          <form method="POST">
+            <div class= "question">
+              {% csrf_token %}
+
+              <!-- QUESTION 1 -->
+               <p>1. What should be added to complete a rectangle<br>
+                <code>import turtle</code> <br> 
+                <code>eve = turtle.Turtle()</code> <br><br>
+                <code> for x in range(0,2):</code><br>
+                &emsp;&emsp;
+                <code>eve.forward(50)</code> <br> 
+                &emsp;&emsp;
+                <code>eve.left(90)</code> <br> 
+                &emsp;&emsp;
+                <code>eve.forward(100)</code> <br> 
+                &emsp;&emsp;
+                <code>#What should be added here?</code> <br> 
+
+               <br><br>
+               {{ form.answer_5_1 }}
+               <br>
+               <br>
+              <button type="submit"> Submit </button>
+              <br>
+              {% if  user.answer_5_1 == "eve.left(90)" %}
+                <center> 
+                  <img src = "{% static 'accounts/curriculum/Images/happy.png' %}" height=200 width=250/> 
+                  <br> 
+                  <p> That's correct! </p>
+                </center>
+         
+              {% else %}
+                <center> 
+                  <img src = "{% static 'accounts/curriculum/Images/sad.png' %}" height=200 width=250/> 
+                  <br> 
+                  <p>Make me happy by answering correctly!</p>
+                </center>
+                <br>
+                <br>
+              {% endif %}
+            </div>
+          </form>
+        </p>
+      </div>
 
    
         </p>

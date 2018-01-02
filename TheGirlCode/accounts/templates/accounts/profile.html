@@ -37,10 +37,28 @@
 
         <ul>
          <li>
-             {% if user.userprofile.progress > 30 %}
+             {% if user.userprofile.progress < 20 %}
+             <a href="{% url 'accounts:course1' %}"> Course</a>
+
+             {% elif user.userprofile.progress >= 20 and user.userprofile.progress < 45 %}
              <a href="{% url 'accounts:course2' %}"> Course</a>
-             {% else %}
-             <a href="{% url 'accounts:course2' %}"> Course</a>
+
+             {% elif user.userprofile.progress >= 45 and user.userprofile.progress < 55 %}
+             <a href="{% url 'accounts:course3' %}"> Course</a>
+
+             {% elif user.userprofile.progress >= 55 and user.userprofile.progress < 70 %}
+             <a href="{% url 'accounts:course4' %}"> Course</a>
+
+             {% elif user.userprofile.progress >= 70 and user.userprofile.progress < 75 %}
+             <a href="{% url 'accounts:course5' %}"> Course</a>
+
+             {% elif user.userprofile.progress >= 75 and user.userprofile.progress < 90 %}
+             <a href="{% url 'accounts:course6' %}"> Course</a>
+
+             {% elif user.userprofile.progress >= 90 and user.userprofile.progress <= 100 %}
+             <a href="{% url 'accounts:course7' %}"> Course</a>
+
+
              {% endif %}
          </li>
          <li class="dropdown">
@@ -75,6 +93,7 @@
          </div>
 
       <div class="section" id="projects">
+
         <div class="container">
             <!-- main container -->
             <div class="main-container portfolio-inner clearfix">
@@ -91,7 +110,7 @@
                                         <div class="portfolio-border clearfix">
                                             <div class="item_info">
                                                 <p>Rock, paper and scissors</p>
-                                                <em>Rock, paper or scissor! Choose!</em>
+                                                <em>Rock, paper or scissor? Come on and create your own rock, paper and scissor game!</em>
                                             </div>
                                         </div>
                                     </div>
@@ -117,12 +136,12 @@
                             
                             <!-- single work -->
                             <div class="col-md-4 col-sm-6 projects">
-                                <a id="demo03" href="#" class="portfolio_item"> <center><img src="{% static 'accounts/profile/profile img/pyg2.png' %}" alt="Card image cap" class="img-responsive" style="height: 200px"></center>
+                                <a id="demo03" href="{% url 'accounts:pyglatin' %}" class="portfolio_item"> <center><img src="{% static 'accounts/profile/profile img/pyg2.png' %}" alt="Card image cap" class="img-responsive" style="height: 200px"></center>
                                     <div class="portfolio_item_hover">
                                         <div class="portfolio-border research">
                                             <div class="item_info">
-                                                <p>Strings</p>
-                                                <em> blah blah</em> </div>
+                                                <p>Pyglatin</p>
+                                                <em>Ever wondered how to speak Pyglatin? Build your own english to pyglatin convertor!</em> </div>
                                         </div>
                                     </div>
                                 </a>

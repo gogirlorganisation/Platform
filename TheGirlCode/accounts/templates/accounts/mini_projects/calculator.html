@@ -15,13 +15,98 @@
 
           <div class="question">
 
-            <h1> Calculator &middot; Python</h1>
+            <h1> Mini Projects· Python</h1>
 
             <p>
+            
+			Today, we’ll learn how to apply the concepts you’ve learnt to create a calculator. 
+			To make a calculator, you’ll need to be familiar with the following concepts:
+			<br>
+			Functions
+			<br>
+			Operators 
 
 
+			              <br>
+			              <br>
 
-            </div>
+			           
+			To make a calculator that adds, subtracts, multiplies and divides you’ll need to define 4 functions that add, subtract , multiply and divide respectively. 
+
+			              <br>
+			              <br>
+			            
+
+			<code> # This function adds two numbers  <br>
+			def add(x, y):<br>
+			   return x + y<br>
+
+			# This function subtracts two numbers <br>
+			def subtract(x, y):<br>
+			   return x - y<br>
+
+			# This function multiplies two numbers<br>
+			def multiply(x, y):<br>
+			   return x * y<br>
+
+			# This function divides two numbers<br>
+			def divide(x, y):<br>
+			   return x / y </code>
+			   <br> <br>
+
+			Then we have to provide the user with options. After entering two numbers, they need to enter an option to decide which function they wish to perform. 
+
+
+			<br>
+
+			<code>print(&quot;Select operation.&quot;)<br>
+			print(&quot;1.Add&quot;)<br>
+			print(&quot;2.Subtract&quot;)<br>
+			print(&quot;3.Multiply&quot;)<br>
+			print(&quot;4.Divide&quot;)</code><br>
+
+			Once you have printed the options you need the input from the user. <br> <br>
+
+			<code> # Take input from the user <br>
+			choice = input(&quot;Enter choice(1/2/3/4):&quot;)</code><br><br>
+
+			Then you need the two numbers.<br><br>
+
+			num1 = input(&quot;Enter first number: &quot;) <br>
+			num2 = input(&quot;Enter second number: &quot;)</code><br>
+
+			After you have all the input you need to act accordingly. <br><br>
+
+			<code>if choice == &#39;1&#39;:<br>
+			&emsp;&emsp;
+			   print(num1,&quot;+&quot;,num2,&quot;=&quot;, add(num1,num2))<br>
+
+			elif choice == &#39;2&#39;:<br>
+			&emsp;&emsp;
+			   print(num1,&quot;-&quot;,num2,&quot;=&quot;, subtract(num1,num2))<br>
+
+			elif choice == &#39;3&#39;:<br>
+			&emsp;&emsp;
+			   print(num1,&quot;*&quot;,num2,&quot;=&quot;, multiply(num1,num2))<br>
+
+			elif choice == &#39;4&#39;: <br>
+			&emsp;&emsp;
+			   print(num1,&quot;/&quot;,num2,&quot;=&quot;, divide(num1,num2))</code><br><br>
+
+			For the case when the user doesn't enter a valid choice make an else statement <br> <br>
+			<code>
+			else:<br>
+			&emsp;&emsp;
+			   print(&quot;Invalid input&quot;)</code><br>
+			<br>
+			<br>
+
+			Done!
+
+</p>
+</div>
+</div>
+
 
 
 

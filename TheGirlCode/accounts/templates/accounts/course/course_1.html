@@ -3,7 +3,7 @@
 {% block body %}
 
 {% load static %}
-<script type="text/javascript" src="{% static 'accounts/curriculum/js/jquery.js'%}"></script>
+<script type="text/javascript" src="{% static 'Bootstrap/assets/js/vendor/jquery-slim.min.js'%}"></script>
 
   <div class="nine columns child">
 
@@ -21,7 +21,7 @@
           <br>
           <br>
 
-          Some words will be underlined and can be clicked upon for explanation   <a id="w1" href="#" onclick="return false;"><b>like this</b></a><span id="p1" class="hidden"> ( Good job! You’ve opened up an explanation for ‘like this’ and you can do it <b><u>again!</u></b> ( Wow, you’re terrific at this!) </span>
+          Some words will be underlined and can be clicked upon for explanation   <a id="w1" href="#" onclick="return false;"><b>like this.</b></a><span id="p1" class="hidden"> Good job! You’ve opened up an explanation for ‘like this’ and you can do it <b> <a id="w4" href="#" onclick="return false;">again.</span></b></a><span id="p4" class="hidden"> Wow! You are terrific at this!! </span>
 
           <br>
           <br>
@@ -38,7 +38,7 @@
           <br>
   
 
-           A computer program is made of <u><b>algorithms</u></b> (An algorithm is like a recipe: if you’ve ever cooked, you probably know that you are made to follow certain steps. Say, you want to make a glass of coffee. You would first put the coffee powder, then pour the milk, and then stir. For computers, this step-by-step instruction is called an Algorithm.) written in proper <u><b>syntax.</u></b>(It is a fancy word for grammar, so programming languages have a certain way in which we have to write them, this is called the syntax.)
+           A computer program is made of <a id="w2" href="#" onclick="return false;"><b>algorithms</b></a><span id="p2" class="hidden"> (An algorithm is like a recipe: if you’ve ever cooked, you probably know that you are made to follow certain steps. Say, you want to make a glass of coffee. You would first put the coffee powder, then pour the milk, and then stir. For computers, this step-by-step instruction is called an Algorithm)</span> written in proper<a id="w3" href="#" onclick="return false;"> <b>syntax.</a></b><span id="p3" class="hidden"> (It is a fancy word for grammar, so programming languages have a certain way in which we have to write them, this is called the syntax.)</span>
 
            <br>
            <br>
@@ -334,8 +334,8 @@
         <p>
           <br>
           <br>
-          You can directly print <b> <u> variables </b> </u> (You will just learn about variables next!) like <br> <br>
-           <code> print(variable) </code> <br> <br>
+          You can directly print <b> <a id="w5" href="#" onclick="return false;"> variables </b> </a><span id="p5" class="hidden">(Variables are containers of information. Don't worry! You will just learn about variables next!)</span> like <br> <br>
+           <code> print(variable)</code> <br> <br>
          </p>
 
          <h1> Variables </h1>
@@ -359,7 +359,7 @@
           <br>
           <br>
       
-          <code> print (red) </code>
+          <code> print (red)</code>
 
           <br>
           <br>
@@ -539,6 +539,11 @@
       $(document).ready(function () {
       var MastStory = function () {
         $('#w1').click(function(){ $('#p1').removeClass('hidden'); });
+        $('#w2').click(function(){ $('#p2').removeClass('hidden'); });
+        $('#w3').click(function(){ $('#p3').removeClass('hidden'); });
+        $('#w4').click(function(){ $('#p4').removeClass('hidden'); });
+        $('#w5').click(function(){ $('#p5').removeClass('hidden'); });
+        $('#clr').click(function(){ $('#p1').addClass('hidden'); });
       };
       MastStory();
       });

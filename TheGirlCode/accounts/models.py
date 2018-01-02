@@ -55,6 +55,9 @@ class UserProfile(models.Model):
     answer_4_3 = models.CharField(max_length=50, default="")
     answer_4_3_check = models.BooleanField(default=False)
 
+    answer_5_1 = models.CharField(max_length=50, default="")
+    answer_5_1_check = models.BooleanField(default=False)
+
     answer_6_1 = models.CharField(max_length=50, default="")
     answer_6_1_check = models.BooleanField(default=False)
 
@@ -63,6 +66,12 @@ class UserProfile(models.Model):
 
     answer_6_3 = models.CharField(max_length=50, default="")
     answer_6_3_check = models.BooleanField(default=False)
+
+    answer_7_1 = models.CharField(max_length=50, default="")
+    answer_7_1_check = models.BooleanField(default=False)
+
+    answer_7_2 = models.IntegerField(default=0)
+    answer_7_2_check = models.BooleanField(default=False)
 
     def __str__(self):  # Displays names on the admin site
         return self.user.username

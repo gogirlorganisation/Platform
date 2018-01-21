@@ -2,12 +2,14 @@
 
 The Girl Code Platform is a powerful, open source application which is used in our workshops to teach programming. At The Girl Code, we aim to inspire young girls that they can code too. By teaching them Python through fun and interactive media and exposing them to a community of likeminded young girls. We're a small team of 10 developers at the moment trying to make the introduction to programming as magical as possible.
 
-[![Zulip chat](https://img.shields.io/badge/zulip-tgc-brightgreen.svg)](https://tgc.zulip.org) [![Twitter](https://img.shields.io/badge/twitter-@TheGirlCode5-blue.svg?style=flat)](https://twitter.com/TheGirlCode5) [![Facebook](https://img.shields.io/badge/Facebook-@girlscancodetoo-blue.svg?style=flat)](https://www.facebook.com/girlscancodetoo/)
+[![Zulip chat](https://img.shields.io/badge/zulip-tgc-brightgreen.svg)](http://tgc.zulipchat.com) 
+[![Twitter](https://img.shields.io/badge/twitter-@TheGirlCode5-blue.svg?style=flat)](https://twitter.com/TheGirlCode5) 
+[![Facebook](https://img.shields.io/badge/Facebook-@girlscancodetoo-blue.svg?style=flat)](https://www.facebook.com/girlscancodetoo/)
 
 ## Getting started
 
 Click on the appropriate link below. If nothing seems to apply, 
-join us on the [Zulip community server](https://zulip.readthedocs.io/en/latest/contributing/chat-zulip-org.html) and tell us what's up!
+join us on the [Zulip community server](http://tgc.zulipchat.com) and tell us what's up!
 
 You might be interested in:
 
